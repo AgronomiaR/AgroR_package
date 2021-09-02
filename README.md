@@ -1,5 +1,5 @@
 
-# AgroR <img src='logo.png' align="right" height="139" />
+# [AgroR](https://agronomiar.github.io/AgroR_package/index.html) <img src='logo.png' align="right" height="139" />
 
 [![CRAN status](https://www.r-pkg.org/badges/version-ago/AgroR)](https://CRAN.R-project.org/package=AgroR)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
