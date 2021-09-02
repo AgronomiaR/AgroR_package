@@ -19,7 +19,7 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
@@ -44,6 +44,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="Analysis: Dunnett test — dunnett" />
@@ -63,13 +69,23 @@
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140429633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140429633-1');
+</script>
+
 
   </head>
 
   <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -88,20 +104,291 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <span class="fa fa-home"></span>
      
+    Home
   </a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Descriptive
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../reference/desc.html">desc</a>
+    </li>
+    <li>
+      <a href="../reference/desc2fat.html">desc2fat</a>
+    </li>
+    <li>
+      <a href="../reference/desc3fat.html">desc3fat</a>
+    </li>
+    <li>
+      <a href="../reference/dispvar.html">dispvar</a>
+    </li>
+    <li>
+      <a href="../reference/tabledesc.html">tabledesc</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Analysis
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../reference/test_two.html">test_two</a>
+    </li>
+    <li>
+      <a href="../reference/DIC.html">DIC</a>
+    </li>
+    <li>
+      <a href="../reference/DBC.html">DBC</a>
+    </li>
+    <li>
+      <a href="../reference/DQL.html">DQL</a>
+    </li>
+    <li>
+      <a href="../reference/DIC.glm.html">DIC.glm</a>
+    </li>
+    <li>
+      <a href="../reference/DBC.glm.html">DBC.glm</a>
+    </li>
+    <li>
+      <a href="../reference/FAT2DIC.html">FAT2DIC</a>
+    </li>
+    <li>
+      <a href="../reference/FAT2DBC.html">FAT2DBC</a>
+    </li>
+    <li>
+      <a href="../reference/FAT3DIC.html">FAT3DIC</a>
+    </li>
+    <li>
+      <a href="../reference/FAT3DBC.html">FAT3DBC</a>
+    </li>
+    <li>
+      <a href="../reference/PSUBDIC.html">PSUBDIC</a>
+    </li>
+    <li>
+      <a href="../reference/PSUBDBC.html">PSUBDBC</a>
+    </li>
+    <li>
+      <a href="../reference/PSUBSUB.html">PSUBSUB</a>
+    </li>
+    <li>
+      <a href="../reference/FAT2DIC.ad.html">FAT2DIC.ad</a>
+    </li>
+    <li>
+      <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
+    </li>
+    <li>
+      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
+    </li>
+    <li>
+      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
+    </li>
+    <li>
+      <a href="../reference/conjdic.html">conjdic</a>
+    </li>
+    <li>
+      <a href="../reference/conjdbc.html">conjdbc</a>
+    </li>
+    <li>
+      <a href="../reference/dunnett.html">dunnett</a>
+    </li>
+    <li>
+      <a href="../reference/DICT.html">DICT</a>
+    </li>
+    <li>
+      <a href="../reference/DBCT.html">DBCT</a>
+    </li>
+    <li>
+      <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/logistic.html">logistic</a>
+    </li>
+    <li>
+      <a href="../reference/polynomial.html">polynomial</a>
+    </li>
+    <li>
+      <a href="../reference/polynomial2.html">polynomial2</a>
+    </li>
+    <li>
+      <a href="../reference/polynomial2_color.html">polynomial2_color</a>
+    </li>
+    <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Graphs
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../reference/bar_graph.html">bar_graph</a>
+    </li>
+    <li>
+      <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/corgraph.html">corgraph</a>
+    </li>
+    <li>
+      <a href="../reference/cor_ic.html">cor_ic</a>
+    </li>
+    <li>
+      <a href="../reference/line_plot.html">line_plot</a>
+    </li>
+    <li>
+      <a href="../reference/plot_cor.html">plot_cor</a>
+    </li>
+    <li>
+      <a href="../reference/plot_interaction.html">plot_interaction</a>
+    </li>
+    <li>
+      <a href="../reference/plot_jitter.html">plot_jitter</a>
+    </li>
+    <li>
+      <a href="../reference/plot_TH.html">plot_TH</a>
+    </li>
+    <li>
+      <a href="../reference/plot_TH1.html">plot_TH1</a>
+    </li>
+    <li>
+      <a href="../reference/radargraph.html">radargraph</a>
+    </li>
+    <li>
+      <a href="../reference/seg_graph.html">seg_graph</a>
+    </li>
+    <li>
+      <a href="../reference/sk_graph.html">sk_graph</a>
+    </li>
+    <li>
+      <a href="../reference/spider_graph.html">spider_graph</a>
+    </li>
+    <li>
+      <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Data set
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../reference/aristolochia.html">aristolochia</a>
+    </li>
+    <li>
+      <a href="../reference/bean.html">bean</a>
+    </li>
+    <li>
+      <a href="../reference/cloro.html">cloro</a>
+    </li>
+    <li>
+      <a href="../reference/corn.html">corn</a>
+    </li>
+    <li>
+      <a href="../reference/covercrops.html">covercrops</a>
+    </li>
+    <li>
+      <a href="../reference/emerg.html">emerg</a>
+    </li>
+    <li>
+      <a href="../reference/enxofre.html">enxofre</a>
+    </li>
+    <li>
+      <a href="../reference/laranja.html">laranja</a>
+    </li>
+    <li>
+      <a href="../reference/mirtilo.html">mirtilo</a>
+    </li>
+    <li>
+      <a href="../reference/orchard.html">orchard</a>
+    </li>
+    <li>
+      <a href="../reference/passiflora.html">passiflora</a>
+    </li>
+    <li>
+      <a href="../reference/pepper.html">pepper</a>
+    </li>
+    <li>
+      <a href="../reference/phao.html">phao</a>
+    </li>
+    <li>
+      <a href="../reference/pomegranate.html">pomegranate</a>
+    </li>
+    <li>
+      <a href="../reference/porco.html">porco</a>
+    </li>
+    <li>
+      <a href="../reference/sensorial.html">sensorial</a>
+    </li>
+    <li>
+      <a href="../reference/simulate1.html">simulate1</a>
+    </li>
+    <li>
+      <a href="../reference/simulate2.html">simulate2</a>
+    </li>
+    <li>
+      <a href="../reference/simulate3.html">simulate3</a>
+    </li>
+    <li>
+      <a href="../reference/soybean.html">soybean</a>
+    </li>
+    <li>
+      <a href="../reference/tomate.html">tomate</a>
+    </li>
+    <li>
+      <a href="../reference/weather.html">weather</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Utils
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../reference/sketch.html">sketch</a>
+    </li>
+    <li>
+      <a href="../reference/transf.html">transf</a>
+    </li>
+    <li>
+      <a href="../reference/summarise_anova.html">summarise_anova</a>
+    </li>
+    <li>
+      <a href="../reference/aacp.html">aacp</a>
+    </li>
+  </ul>
 </li>
 <li>
-  <a href="../news/index.html">Changelog</a>
+  <a href="../news/index.html">News</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
+      
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
       
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -199,34 +486,22 @@
 <span class='co'>#====================================================</span>
 <span class='co'># randomized block design in factorial double</span>
 <span class='co'>#====================================================</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://agronomiar.github.io/AgroR_Tutorial/index.html'>AgroR</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://agronomiar.github.io/AgroR_package/index.html'>AgroR</a></span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>cloro</span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/attach.html'>attach</a></span><span class='op'>(</span><span class='va'>cloro</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='message'>The following object is masked from simulate3:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from porco:</span>
-#&gt; <span class='message'></span>
 #&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from simulate1:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from aristolochia (pos = 9):</span>
+#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from aristolochia (pos = 5):</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from enxofre:</span>
+#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from simulate2:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, f1, f2, resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from cloro (pos = 11):</span>
+#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from laranja:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, f1, f2, resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from simulate2:</span>
+#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from aristolochia (pos = 8):</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from laranja (pos = 15):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from aristolochia (pos = 16):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from mirtilo (pos = 17):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from mirtilo (pos = 18):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from laranja (pos = 19):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    bloco, resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from passiflora:</span>
+#&gt; <span class='message'>    resp</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from passiflora:</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    bloco</span></div><div class='input'><span class='va'>respAd</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>268</span>, <span class='fl'>322</span>, <span class='fl'>275</span>, <span class='fl'>350</span>, <span class='fl'>320</span><span class='op'>)</span>
 <span class='va'>a</span><span class='op'>=</span><span class='fu'><a href='FAT2DBC.ad.html'>FAT2DBC.ad</a></span><span class='op'>(</span><span class='va'>f1</span>, <span class='va'>f2</span>, <span class='va'>bloco</span>, <span class='va'>resp</span>, <span class='va'>respAd</span>,
@@ -345,6 +620,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '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',
+    indexName: 'AgroR',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>
