@@ -588,7 +588,7 @@
 <span class='co'>#==============================</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://agronomiar.github.io/AgroR_package/index.html'>AgroR</a></span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>tomate</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>tomate</span>, <span class='fu'>PSUBDBC</span><span class='op'>(</span><span class='va'>parc</span>, <span class='va'>subp</span>, <span class='va'>bloco</span>, <span class='va'>resp</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>tomate</span>, <span class='fu'>PSUBDBC</span><span class='op'>(</span><span class='va'>parc</span>, <span class='va'>subp</span>, <span class='va'>bloco</span>, <span class='va'>resp</span>, ylab<span class='op'>=</span><span class='st'>"Dry mass (g)"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: Model is nearly unidentifiable: large eigenvalue ratio</span>
 #&gt; <span class='warning'> - Rescale variables?</span></div><div class='output co'>#&gt; <span style='color: #00BB00;font-weight: bold;'>
 #&gt; -----------------------------------------------------------------
@@ -673,7 +673,7 @@
 <span class='co'>#==============================</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://agronomiar.github.io/AgroR_package/index.html'>AgroR</a></span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>orchard</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>orchard</span>, <span class='fu'>PSUBDBC</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>Bloco</span>, <span class='va'>Resp</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>orchard</span>, <span class='fu'>PSUBDBC</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>Bloco</span>, <span class='va'>Resp</span>, ylab<span class='op'>=</span><span class='st'>"CBM"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: Model is nearly unidentifiable: large eigenvalue ratio</span>
 #&gt; <span class='warning'> - Rescale variables?</span></div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
 #&gt; -----------------------------------------------------------------
