@@ -96,7 +96,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
       </span>
     </div>
 
@@ -186,12 +186,6 @@
       <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
     </li>
     <li>
-      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
-    </li>
-    <li>
-      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
-    </li>
-    <li>
       <a href="../reference/conjdic.html">conjdic</a>
     </li>
     <li>
@@ -223,6 +217,9 @@
     </li>
     <li>
       <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
     </li>
   </ul>
 </li>
@@ -430,7 +427,9 @@
   pointsize <span class='op'>=</span> <span class='fl'>5</span>,
   linesize <span class='op'>=</span> <span class='fl'>0.8</span>,
   separate <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(\""</span>, <span class='st'>"\")"</span><span class='op'>)</span>,
-  n <span class='op'>=</span> <span class='cn'>NA</span>
+  n <span class='op'>=</span> <span class='cn'>NA</span>,
+  DFres <span class='op'>=</span> <span class='cn'>NA</span>,
+  SSq <span class='op'>=</span> <span class='cn'>NA</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -515,6 +514,14 @@
     <tr>
       <th>n</th>
       <td><p>Number of decimal places for regression equations</p></td>
+    </tr>
+    <tr>
+      <th>DFres</th>
+      <td><p>Residue freedom degrees</p></td>
+    </tr>
+    <tr>
+      <th>SSq</th>
+      <td><p>Sum of squares of the residue</p></td>
     </tr>
     </table>
 

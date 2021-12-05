@@ -96,7 +96,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
       </span>
     </div>
 
@@ -186,12 +186,6 @@
       <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
     </li>
     <li>
-      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
-    </li>
-    <li>
-      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
-    </li>
-    <li>
       <a href="../reference/conjdic.html">conjdic</a>
     </li>
     <li>
@@ -223,6 +217,9 @@
     </li>
     <li>
       <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
     </li>
   </ul>
 </li>
@@ -416,12 +413,13 @@
   <span class='va'>response</span>,
   norm <span class='op'>=</span> <span class='st'>"sw"</span>,
   homog <span class='op'>=</span> <span class='st'>"bt"</span>,
-  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
   alpha.f <span class='op'>=</span> <span class='fl'>0.05</span>,
   alpha.t <span class='op'>=</span> <span class='fl'>0.05</span>,
   quali <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>TRUE</span>, <span class='cn'>TRUE</span><span class='op'>)</span>,
+  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
   grau <span class='op'>=</span> <span class='cn'>NA</span>,
   transf <span class='op'>=</span> <span class='fl'>1</span>,
+  constant <span class='op'>=</span> <span class='fl'>0</span>,
   geom <span class='op'>=</span> <span class='st'>"bar"</span>,
   theme <span class='op'>=</span> <span class='fu'>theme_classic</span><span class='op'>(</span><span class='op'>)</span>,
   ylab <span class='op'>=</span> <span class='st'>"Response"</span>,
@@ -467,10 +465,6 @@
       <td><p>Homogeneity test of variances (<em>default</em> is Bartlett)</p></td>
     </tr>
     <tr>
-      <th>mcomp</th>
-      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
-    </tr>
-    <tr>
       <th>alpha.f</th>
       <td><p>Level of significance of the F test (<em>default</em> is 0.05)</p></td>
     </tr>
@@ -483,12 +477,20 @@
       <td><p>Defines whether the factor is quantitative or qualitative (<em>qualitative</em>)</p></td>
     </tr>
     <tr>
+      <th>mcomp</th>
+      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
+    </tr>
+    <tr>
       <th>grau</th>
       <td><p>Degree of polynomial in case of quantitative factor (<em>default</em> is 1)</p></td>
     </tr>
     <tr>
       <th>transf</th>
       <td><p>Applies data transformation (default is 1; for log consider 0)</p></td>
+    </tr>
+    <tr>
+      <th>constant</th>
+      <td><p>Add a constant for transformation (enter value)</p></td>
     </tr>
     <tr>
       <th>geom</th>
@@ -586,7 +588,7 @@
 <p>Mendiburu, F., &amp; de Mendiburu, M. F. (2019). Package ‘agricolae’. R Package, Version, 1-2.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='FAT2DIC.art.html'>FAT2DIC.art</a>, <a href='FAT2DIC.ad.html'>FAT2DIC.ad</a></p></div>
+    <div class='dont-index'><p><a href='FAT2DIC.ad.html'>FAT2DIC.ad</a></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Gabriel Danilo Shimizu, <a href='mailto:shimizu@uel.br'>shimizu@uel.br</a></p>
@@ -758,7 +760,84 @@
 #&gt; A3 150 bB 167 aA</div><div class='output co'>#&gt; <span class='message'></span><span style='color: #000000;'></span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>Averages followed by the same lowercase letter in the column and </span>
-#&gt; <span class='message'>uppercase in the row do not differ by the tukey (p&lt; 0.05 )</span><span></span></div><div class='img'><img src='FAT2DIC-2.png' alt='' width='700' height='433' /></div></span></pre>
+#&gt; <span class='message'>uppercase in the row do not differ by the tukey (p&lt; 0.05 )</span><span></span></div><div class='img'><img src='FAT2DIC-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>corn</span>, <span class='fu'>FAT2DIC</span><span class='op'>(</span><span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>Resp</span>, mcomp<span class='op'>=</span><span class='st'>"sk"</span>, quali<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>TRUE</span>, <span class='cn'>TRUE</span><span class='op'>)</span>,ylab<span class='op'>=</span><span class='st'>"Heigth (cm)"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
+#&gt; -----------------------------------------------------------------
+#&gt; Normality of errors
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>                         Method Statistic   p.value
+#&gt;  Shapiro-Wilk normality test(W) 0.9704679 0.6785543
+#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #000000;'>As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered normal</span><span></span></div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
+#&gt; -----------------------------------------------------------------
+#&gt; Homogeneity of Variances
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>                              Method Statistic   p.value
+#&gt;  Bartlett test(Bartlett's K-squared)  3.948702 0.5568251
+#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #000000;'>As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, the variances can be considered homogeneous</span><span></span></div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
+#&gt; -----------------------------------------------------------------
+#&gt; Independence from errors
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>                 Method Statistic   p.value
+#&gt;  Durbin-Watson test(DW)  2.820109 0.8709071
+#&gt; </div><div class='output co'>#&gt; <span class='message'></span><span style='color: #000000;'>As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered independent</span><span></span></div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
+#&gt; -----------------------------------------------------------------
+#&gt; Additional Information
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>
+#&gt; CV (%) =  0.49
+#&gt; Mean =  159.6208
+#&gt; Median =  162.55
+#&gt; Possible outliers =  No discrepant point
+#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
+#&gt; -----------------------------------------------------------------
+#&gt; Analysis of Variance
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>              Df   Sum Sq     Mean.Sq   F value        Pr(F)
+#&gt; Fator1         2 137.3058  68.6529167  110.0158 8.086134e-11
+#&gt; Fator2         1 654.1704 654.1704167 1048.3034 2.080297e-17
+#&gt; Fator1:Fator2  2 436.3508 218.1754167  349.6245 3.948414e-15
+#&gt; Residuals     18  11.2325   0.6240278                       
+#&gt; </div><div class='output co'>#&gt; </div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>-----------------------------------------------------------------
+#&gt; Significant interaction: analyzing the interaction
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>
+#&gt; -----------------------------------------------------------------
+#&gt; Analyzing  F1  inside of each level of  F2
+#&gt; -----------------------------------------------------------------
+#&gt; 
+#&gt;                     Df Sum Sq Mean Sq  F value    Pr(&gt;F)    
+#&gt; Fator2               1 654.17  654.17 1048.303 &lt; 2.2e-16 ***
+#&gt; Fator2:Fator1        4 573.66  143.41  229.820 3.492e-15 ***
+#&gt;   Fator2:Fator1: 55  2 521.74  260.87  418.046 8.202e-16 ***
+#&gt;   Fator2:Fator1: 65  2  51.91   25.96   41.594 1.784e-07 ***
+#&gt; Residuals           18  11.23    0.62                       
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#&gt; 
+#&gt; -----------------------------------------------------------------
+#&gt; Analyzing  F2  inside of the level of  F1
+#&gt; -----------------------------------------------------------------
+#&gt; 
+#&gt;                     Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
+#&gt; Fator1               2  137.31   68.65  110.02 8.086e-11 ***
+#&gt; Fator1:Fator2        3 1090.52  363.51  582.52 &lt; 2.2e-16 ***
+#&gt;   Fator1:Fator2: A1  1  469.71  469.71  752.71 3.876e-16 ***
+#&gt;   Fator1:Fator2: A2  1    4.81    4.81    7.70   0.01249 *  
+#&gt;   Fator1:Fator2: A3  1  616.00  616.00  987.14 &lt; 2.2e-16 ***
+#&gt; Residuals           18   11.23    0.62                      
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='output co'>#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
+#&gt; -----------------------------------------------------------------
+#&gt; Final table
+#&gt; -----------------------------------------------------------------
+#&gt; </span><span>       55     65
+#&gt; A1 150 bB 165 bA
+#&gt; A2 164 aA 162 cB
+#&gt; A3 150 bB 167 aA</div><div class='output co'>#&gt; <span class='message'></span><span style='color: #000000;'></span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>Averages followed by the same lowercase letter in the column and </span>
+#&gt; <span class='message'>uppercase in the row do not differ by the sk (p&lt; 0.05 )</span><span></span></div><div class='img'><img src='FAT2DIC-3.png' alt='' width='700' height='433' /></div><div class='input'>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

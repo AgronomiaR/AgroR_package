@@ -96,7 +96,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
       </span>
     </div>
 
@@ -186,12 +186,6 @@
       <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
     </li>
     <li>
-      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
-    </li>
-    <li>
-      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
-    </li>
-    <li>
       <a href="../reference/conjdic.html">conjdic</a>
     </li>
     <li>
@@ -223,6 +217,9 @@
     </li>
     <li>
       <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
     </li>
   </ul>
 </li>
@@ -415,24 +412,26 @@
   <span class='va'>response</span>,
   norm <span class='op'>=</span> <span class='st'>"sw"</span>,
   homog <span class='op'>=</span> <span class='st'>"bt"</span>,
-  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
-  quali <span class='op'>=</span> <span class='cn'>TRUE</span>,
   alpha.f <span class='op'>=</span> <span class='fl'>0.05</span>,
   alpha.t <span class='op'>=</span> <span class='fl'>0.05</span>,
+  quali <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
   grau <span class='op'>=</span> <span class='fl'>1</span>,
   transf <span class='op'>=</span> <span class='fl'>1</span>,
+  constant <span class='op'>=</span> <span class='fl'>0</span>,
   test <span class='op'>=</span> <span class='st'>"parametric"</span>,
   p.adj <span class='op'>=</span> <span class='st'>"holm"</span>,
   geom <span class='op'>=</span> <span class='st'>"bar"</span>,
   theme <span class='op'>=</span> <span class='fu'>theme_classic</span><span class='op'>(</span><span class='op'>)</span>,
+  ylab <span class='op'>=</span> <span class='st'>"Response"</span>,
   sup <span class='op'>=</span> <span class='cn'>NA</span>,
   CV <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  ylab <span class='op'>=</span> <span class='st'>"Response"</span>,
   xlab <span class='op'>=</span> <span class='st'>""</span>,
   fill <span class='op'>=</span> <span class='st'>"lightblue"</span>,
   angle <span class='op'>=</span> <span class='fl'>0</span>,
   family <span class='op'>=</span> <span class='st'>"sans"</span>,
   textsize <span class='op'>=</span> <span class='fl'>12</span>,
+  labelsize <span class='op'>=</span> <span class='fl'>4</span>,
   dec <span class='op'>=</span> <span class='fl'>3</span>,
   addmean <span class='op'>=</span> <span class='cn'>TRUE</span>,
   errorbar <span class='op'>=</span> <span class='cn'>TRUE</span>,
@@ -461,14 +460,6 @@
       <td><p>Homogeneity test of variances (<em>default</em> is Bartlett)</p></td>
     </tr>
     <tr>
-      <th>mcomp</th>
-      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
-    </tr>
-    <tr>
-      <th>quali</th>
-      <td><p>Defines whether the factor is quantitative or qualitative (<em>default</em> is qualitative)</p></td>
-    </tr>
-    <tr>
       <th>alpha.f</th>
       <td><p>Level of significance of the F test (<em>default</em> is 0.05)</p></td>
     </tr>
@@ -477,12 +468,24 @@
       <td><p>Significance level of the multiple comparison test (<em>default</em> is 0.05)</p></td>
     </tr>
     <tr>
+      <th>quali</th>
+      <td><p>Defines whether the factor is quantitative or qualitative (<em>default</em> is qualitative)</p></td>
+    </tr>
+    <tr>
+      <th>mcomp</th>
+      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
+    </tr>
+    <tr>
       <th>grau</th>
       <td><p>Degree of polynomial in case of quantitative factor (<em>default</em> is 1)</p></td>
     </tr>
     <tr>
       <th>transf</th>
       <td><p>Applies data transformation (<em>default</em> is 1; for log consider 0)</p></td>
+    </tr>
+    <tr>
+      <th>constant</th>
+      <td><p>Add a constant for transformation (enter value)</p></td>
     </tr>
     <tr>
       <th>test</th>
@@ -501,16 +504,16 @@
       <td><p>ggplot2 theme (<em>default</em> is theme_classic())</p></td>
     </tr>
     <tr>
+      <th>ylab</th>
+      <td><p>Variable response name (Accepts the <em>expression</em>() function)</p></td>
+    </tr>
+    <tr>
       <th>sup</th>
       <td><p>Number of units above the standard deviation or average bar on the graph</p></td>
     </tr>
     <tr>
       <th>CV</th>
       <td><p>Plotting the coefficient of variation and p-value of Anova (<em>default</em> is TRUE)</p></td>
-    </tr>
-    <tr>
-      <th>ylab</th>
-      <td><p>Variable response name (Accepts the <em>expression</em>() function)</p></td>
     </tr>
     <tr>
       <th>xlab</th>
@@ -533,6 +536,10 @@
       <td><p>Font size</p></td>
     </tr>
     <tr>
+      <th>labelsize</th>
+      <td><p>Label size</p></td>
+    </tr>
+    <tr>
       <th>dec</th>
       <td><p>Number of cells</p></td>
     </tr>
@@ -550,7 +557,7 @@
     </tr>
     <tr>
       <th>point</th>
-      <td><p>Defines whether to plot mean ("mean"), mean with standard deviation ("mean_sd" - <em>default</em>) or mean with standard error (<em>default</em> - "mean_se"). Only for quali=F.</p></td>
+      <td><p>Defines whether to plot mean ("mean"), mean with standard deviation ("mean_sd" - <em>default</em>) or mean with standard error (<em>default</em> - "mean_se"). For quali=FALSE or quali=TRUE.</p></td>
     </tr>
     <tr>
       <th>angle.label</th>
@@ -575,6 +582,7 @@
 <p>Ramalho M.A.P., Ferreira D.F., Oliveira A.C. 2000. Experimentacao em Genetica e Melhoramento de Plantas. Editora UFLA.</p>
 <p>Scott R.J., Knott M. 1974. A cluster analysis method for grouping mans in the analysis of variance. Biometrics, 30, 507-512.</p>
 <p>Mendiburu, F., and de Mendiburu, M. F. (2019). Package ‘agricolae’. R Package, Version, 1-2.</p>
+<p>Hothorn, T. et al. Package ‘lmtest’. Testing linear regression models. https://cran. r-project. org/web/packages/lmtest/lmtest. pdf. Accessed, v. 6, 2015.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><a href='DBC.html'>DBC</a> <a href='DQL.html'>DQL</a></p></div>

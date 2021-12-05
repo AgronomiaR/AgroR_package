@@ -96,7 +96,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
       </span>
     </div>
 
@@ -186,12 +186,6 @@
       <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
     </li>
     <li>
-      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
-    </li>
-    <li>
-      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
-    </li>
-    <li>
       <a href="../reference/conjdic.html">conjdic</a>
     </li>
     <li>
@@ -223,6 +217,9 @@
     </li>
     <li>
       <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
     </li>
   </ul>
 </li>
@@ -420,7 +417,9 @@
   theme <span class='op'>=</span> <span class='fu'>theme_classic</span><span class='op'>(</span><span class='op'>)</span>,
   ylab <span class='op'>=</span> <span class='st'>"Response"</span>,
   xlab <span class='op'>=</span> <span class='st'>""</span>,
-  var.equal <span class='op'>=</span> <span class='cn'>FALSE</span>
+  var.equal <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  pointsize <span class='op'>=</span> <span class='fl'>2</span>,
+  fill <span class='op'>=</span> <span class='st'>"white"</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -466,6 +465,14 @@
       <th>var.equal</th>
       <td><p>A logical variable indicating whether to treat the two variances as being equal. If TRUE then the pooled variance is used to estimate the variance otherwise the Welch (or Satterthwaite) approximation to the degrees of freedom is used.</p></td>
     </tr>
+    <tr>
+      <th>pointsize</th>
+      <td><p>Point size</p></td>
+    </tr>
+    <tr>
+      <th>fill</th>
+      <td><p>fill box</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -490,25 +497,25 @@
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  resp by trat
-#&gt; t = -0.6702, df = 93.526, p-value = 0.5044
+#&gt; t = -0.13003, df = 96.165, p-value = 0.8968
 #&gt; alternative hypothesis: true difference in means between group A and group B is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  -2.578613  1.277202
+#&gt;  -2.382115  2.089206
 #&gt; sample estimates:
 #&gt; mean in group A mean in group B 
-#&gt;        99.73776       100.38847 
+#&gt;        99.33592        99.48237 
 #&gt; </div><div class='img'><img src='test_two-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>test_two</span><span class='op'>(</span><span class='va'>trat</span>,<span class='va'>resp</span>,paired <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
 #&gt; data:  resp by trat
-#&gt; t = -0.64148, df = 49, p-value = 0.5242
+#&gt; t = -0.14245, df = 49, p-value = 0.8873
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  -2.689198  1.387786
+#&gt;  -2.212539  1.919630
 #&gt; sample estimates:
 #&gt; mean of the differences 
-#&gt;              -0.6507056 
+#&gt;              -0.1464546 
 #&gt; </div><div class='img'><img src='test_two-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

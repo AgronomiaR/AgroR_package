@@ -96,7 +96,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
       </span>
     </div>
 
@@ -186,12 +186,6 @@
       <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
     </li>
     <li>
-      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
-    </li>
-    <li>
-      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
-    </li>
-    <li>
       <a href="../reference/conjdic.html">conjdic</a>
     </li>
     <li>
@@ -223,6 +217,9 @@
     </li>
     <li>
       <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
     </li>
   </ul>
 </li>
@@ -419,10 +416,11 @@
   homog <span class='op'>=</span> <span class='st'>"bt"</span>,
   alpha.f <span class='op'>=</span> <span class='fl'>0.05</span>,
   alpha.t <span class='op'>=</span> <span class='fl'>0.05</span>,
-  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
   quali <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>TRUE</span>, <span class='cn'>TRUE</span><span class='op'>)</span>,
+  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
   grau <span class='op'>=</span> <span class='cn'>NA</span>,
   transf <span class='op'>=</span> <span class='fl'>1</span>,
+  constant <span class='op'>=</span> <span class='fl'>0</span>,
   geom <span class='op'>=</span> <span class='st'>"bar"</span>,
   theme <span class='op'>=</span> <span class='fu'>theme_classic</span><span class='op'>(</span><span class='op'>)</span>,
   ylab <span class='op'>=</span> <span class='st'>"Response"</span>,
@@ -478,12 +476,12 @@
       <td><p>Significance level of the multiple comparison test (<em>default</em> is 0.05)</p></td>
     </tr>
     <tr>
-      <th>mcomp</th>
-      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
-    </tr>
-    <tr>
       <th>quali</th>
       <td><p>Defines whether the factor is quantitative or qualitative (<em>qualitative</em>)</p></td>
+    </tr>
+    <tr>
+      <th>mcomp</th>
+      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
     </tr>
     <tr>
       <th>grau</th>
@@ -492,6 +490,10 @@
     <tr>
       <th>transf</th>
       <td><p>Applies data transformation (default is 1; for log consider 0)</p></td>
+    </tr>
+    <tr>
+      <th>constant</th>
+      <td><p>Add a constant for transformation (enter value)</p></td>
     </tr>
     <tr>
       <th>geom</th>
@@ -565,7 +567,7 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The table of analysis of variance, the test of normality of errors (Shapiro-Wilk, Lilliefors, Anderson-Darling, Cramer-von Mises, Pearson and Shapiro-Francia), the test of homogeneity of variances (Bartlett or Levene), the test of independence of Durbin-Watson errors, the test of multiple comparisons (Tukey, LSD, Scott-Knott or Duncan) or adjustment of regression models up to grade 3 polynomial, in the case of quantitative treatments. Non-parametric analysis can be used by the Friedman test. The column chart for qualitative treatments is also returned. The function also returns a standardized residual plot.</p>
+    <p>The table of analysis of variance, the test of normality of errors (Shapiro-Wilk, Lilliefors, Anderson-Darling, Cramer-von Mises, Pearson and Shapiro-Francia), the test of homogeneity of variances (Bartlett), the test of independence of Durbin-Watson errors, the test of multiple comparisons (Tukey, LSD, Scott-Knott or Duncan) or adjustment of regression models up to grade 3 polynomial, in the case of quantitative treatments. Non-parametric analysis can be used by the Friedman test. The column chart for qualitative treatments is also returned. The function also returns a standardized residual plot.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>The ordering of the graph is according to the sequence in which the factor levels are arranged in the data sheet. The bars of the column and segment graphs are standard deviation.</p>

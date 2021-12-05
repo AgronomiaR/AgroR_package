@@ -96,7 +96,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
       </span>
     </div>
 
@@ -186,12 +186,6 @@
       <a href="../reference/FAT2DBC.ad.html">FAT2DBC.ad</a>
     </li>
     <li>
-      <a href="../reference/FAT2DIC.art.html">FAT2DIC.art</a>
-    </li>
-    <li>
-      <a href="../reference/FAT2DBC.art.html">FAT2DBC.art</a>
-    </li>
-    <li>
       <a href="../reference/conjdic.html">conjdic</a>
     </li>
     <li>
@@ -223,6 +217,9 @@
     </li>
     <li>
       <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
     </li>
   </ul>
 </li>
@@ -416,14 +413,15 @@
   <span class='va'>f3</span>,
   <span class='va'>block</span>,
   <span class='va'>response</span>,
-  quali <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>TRUE</span>, <span class='cn'>TRUE</span>, <span class='cn'>TRUE</span><span class='op'>)</span>,
-  names.fat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"F1"</span>, <span class='st'>"F2"</span>, <span class='st'>"F3"</span><span class='op'>)</span>,
-  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
-  transf <span class='op'>=</span> <span class='fl'>1</span>,
   norm <span class='op'>=</span> <span class='st'>"sw"</span>,
   homog <span class='op'>=</span> <span class='st'>"bt"</span>,
   alpha.f <span class='op'>=</span> <span class='fl'>0.05</span>,
   alpha.t <span class='op'>=</span> <span class='fl'>0.05</span>,
+  quali <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>TRUE</span>, <span class='cn'>TRUE</span>, <span class='cn'>TRUE</span><span class='op'>)</span>,
+  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>,
+  transf <span class='op'>=</span> <span class='fl'>1</span>,
+  constant <span class='op'>=</span> <span class='fl'>0</span>,
+  names.fat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"F1"</span>, <span class='st'>"F2"</span>, <span class='st'>"F3"</span><span class='op'>)</span>,
   ylab <span class='op'>=</span> <span class='st'>"Response"</span>,
   xlab <span class='op'>=</span> <span class='st'>""</span>,
   sup <span class='op'>=</span> <span class='cn'>NA</span>,
@@ -464,22 +462,6 @@
       <td><p>Numerical vector containing the response of the experiment.</p></td>
     </tr>
     <tr>
-      <th>quali</th>
-      <td><p>Defines whether the factor is quantitative or qualitative (<em>qualitative</em>)</p></td>
-    </tr>
-    <tr>
-      <th>names.fat</th>
-      <td><p>Allows labeling the factors 1, 2 and 3.</p></td>
-    </tr>
-    <tr>
-      <th>mcomp</th>
-      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
-    </tr>
-    <tr>
-      <th>transf</th>
-      <td><p>Applies data transformation (<em>default</em> is 1; for log consider 0)</p></td>
-    </tr>
-    <tr>
       <th>norm</th>
       <td><p>Error normality test (<em>default</em> is Shapiro-Wilk)</p></td>
     </tr>
@@ -494,6 +476,26 @@
     <tr>
       <th>alpha.t</th>
       <td><p>Significance level of the multiple comparison test (<em>default</em> is 0.05)</p></td>
+    </tr>
+    <tr>
+      <th>quali</th>
+      <td><p>Defines whether the factor is quantitative or qualitative (<em>qualitative</em>)</p></td>
+    </tr>
+    <tr>
+      <th>mcomp</th>
+      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></td>
+    </tr>
+    <tr>
+      <th>transf</th>
+      <td><p>Applies data transformation (<em>default</em> is 1; for log consider 0)</p></td>
+    </tr>
+    <tr>
+      <th>constant</th>
+      <td><p>Add a constant for transformation (enter value)</p></td>
+    </tr>
+    <tr>
+      <th>names.fat</th>
+      <td><p>Allows labeling the factors 1, 2 and 3.</p></td>
     </tr>
     <tr>
       <th>ylab</th>

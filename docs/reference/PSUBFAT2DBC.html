@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Descriptive: Descriptive analysis — desc • AgroR</title>
+<title>Analysis: Plot subdivided into randomized blocks with a subplot in a double factorial scheme — PSUBFAT2DBC • AgroR</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -52,8 +52,8 @@
 
 
 
-<meta property="og:title" content="Descriptive: Descriptive analysis — desc" />
-<meta property="og:description" content="Performs the descriptive analysis of an experiment with a factor of interest." />
+<meta property="og:title" content="Analysis: Plot subdivided into randomized blocks with a subplot in a double factorial scheme — PSUBFAT2DBC" />
+<meta property="og:description" content="This function performs the analysis of a randomized block design in a split-plot with a subplot in a double factorial scheme." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -398,75 +398,77 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Descriptive: Descriptive analysis</h1>
+    <h1>Analysis: Plot subdivided into randomized blocks with a subplot in a double factorial scheme</h1>
     
-    <div class="hidden name"><code>desc.Rd</code></div>
+    <div class="hidden name"><code>PSUBFAT2DBC.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Performs the descriptive analysis of an experiment with a factor of interest.</p>
+    <p>This function performs the analysis of a randomized block design in a split-plot with a subplot in a double factorial scheme.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>desc</span><span class='op'>(</span><span class='va'>trat</span>, <span class='va'>response</span>, ylab <span class='op'>=</span> <span class='st'>"Response"</span>, xlab <span class='op'>=</span> <span class='st'>"Treatment"</span>, ylim <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>PSUBFAT2DBC</span><span class='op'>(</span>
+  <span class='va'>f1</span>,
+  <span class='va'>f2</span>,
+  <span class='va'>f3</span>,
+  <span class='va'>block</span>,
+  <span class='va'>resp</span>,
+  alpha.f <span class='op'>=</span> <span class='fl'>0.05</span>,
+  alpha.t <span class='op'>=</span> <span class='fl'>0.05</span>,
+  mcomp <span class='op'>=</span> <span class='st'>"tukey"</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>trat</th>
-      <td><p>Numerical or complex vector with treatments</p></td>
+      <th>f1</th>
+      <td><p>Numeric or complex vector with plot levels</p></td>
     </tr>
     <tr>
-      <th>response</th>
-      <td><p>Numerical vector containing the response of the experiment.</p></td>
+      <th>f2</th>
+      <td><p>Numeric or complex vector with splitplot levels</p></td>
     </tr>
     <tr>
-      <th>ylab</th>
-      <td><p>Variable response name (Accepts the <em>expression</em>() function)</p></td>
+      <th>f3</th>
+      <td><p>Numeric or complex vector with splitsplitplot levels</p></td>
     </tr>
     <tr>
-      <th>xlab</th>
-      <td><p>x name (Accepts the <em>expression</em>() function)</p></td>
+      <th>block</th>
+      <td><p>Numeric or complex vector with blocks</p></td>
     </tr>
     <tr>
-      <th>ylim</th>
-      <td><p>y-axis scale</p></td>
+      <th>resp</th>
+      <td><p>Numeric vector with responses</p></td>
+    </tr>
+    <tr>
+      <th>alpha.f</th>
+      <td><p>Level of significance of the F test (<em>default</em> is 0.05)</p></td>
+    </tr>
+    <tr>
+      <th>alpha.t</th>
+      <td><p>Significance level of the multiple comparison test (<em>default</em> is 0.05)</p></td>
+    </tr>
+    <tr>
+      <th>mcomp</th>
+      <td><p>Multiple comparison test (Tukey (<em>default</em>), LSD and Duncan)</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The function returns exploratory measures of position and dispersion, such as mean, median, maximum, minimum, coefficient of variation, etc ...</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><a href='desc2fat.html'>desc2fat</a>, <a href='tabledesc.html'>tabledesc</a>,<a href='dispvar.html'>dispvar</a></p></div>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Gabriel Danilo Shimizu, <a href='mailto:shimizu@uel.br'>shimizu@uel.br</a></p>
-<p>Leandro Simoes Azeredo Goncalves</p>
-<p>Rodrigo Yudi Palhaci Marubayashi</p>
+    <p>Analysis of variance of fixed effects and multiple comparison test of Tukey, Scott-Knott, LSD or Duncan.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://agronomiar.github.io/AgroR_package/index.html'>AgroR</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"pomegranate"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>pomegranate</span>, <span class='fu'>desc</span><span class='op'>(</span><span class='va'>trat</span>,<span class='va'>WL</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='img'><img src='desc-1.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; <span style='color: #00BB00;font-weight: bold;'>
-#&gt; -----------------------------------------------------------------
-#&gt; </span><span>General description</span><span style='color: #00BB00;font-weight: bold;'>
-#&gt; -----------------------------------------------------------------
-#&gt; </span><span>            Mean Median  Min  Max Variance        SD    CV(%)
-#&gt; General 2.259583  2.225 1.54 3.22 0.207465 0.4554833 20.15784
-#&gt; </span><span style='color: #00BB00;font-weight: bold;'>
-#&gt; -----------------------------------------------------------------
-#&gt; </span><span>Treatment</span><span style='color: #00BB00;font-weight: bold;'>
-#&gt; -----------------------------------------------------------------
-#&gt; </span><span>     Mean Median  Min  Max    Variance         SD     CV(%)
-#&gt; T1 1.8425  1.795 1.68 2.10 0.039758333 0.19939492 10.821977
-#&gt; T2 1.6775  1.675 1.54 1.82 0.015091667 0.12284814  7.323287
-#&gt; T3 2.6175  2.620 2.24 2.99 0.093758333 0.30619983 11.698179
-#&gt; T4 2.6200  2.525 2.21 3.22 0.182066667 0.42669271 16.285981
-#&gt; T5 2.6375  2.665 2.44 2.78 0.020291667 0.14244882  5.400903
-#&gt; T6 2.1625  2.170 2.04 2.27 0.008891667 0.09429563  4.360492</div></span></pre>
+    <pre class="examples"><div class='input'><span class='va'>f1</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"PD"</span>,<span class='st'>"PDE"</span>,<span class='st'>"C"</span><span class='op'>)</span>, e <span class='op'>=</span> <span class='fl'>40</span><span class='op'>)</span>;<span class='va'>f1</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>f1</span>,<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>f1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>f2</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>300</span>,<span class='fl'>400</span><span class='op'>)</span>, e <span class='op'>=</span> <span class='fl'>20</span>,<span class='fl'>3</span><span class='op'>)</span>;<span class='va'>f2</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>f2</span>,<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>f2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>f3</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"c1"</span>, <span class='st'>"c2"</span>, <span class='st'>"c3"</span>, <span class='st'>"c4"</span><span class='op'>)</span>, e <span class='op'>=</span> <span class='fl'>5</span>,<span class='fl'>6</span><span class='op'>)</span>;<span class='va'>f3</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>f3</span>,<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>f3</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>bloco</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"B"</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span>,<span class='fl'>24</span><span class='op'>)</span>; <span class='va'>bloco</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>bloco</span>,<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>bloco</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>
+<span class='va'>resp</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>120</span>,<span class='fl'>50</span>,<span class='fl'>5</span><span class='op'>)</span>
+<span class='fu'>PSUBFAT2DBC</span><span class='op'>(</span><span class='va'>f1</span>,<span class='va'>f2</span>,<span class='va'>f3</span>,<span class='va'>bloco</span>,<span class='va'>resp</span>,alpha.f <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span> <span class='co'># para soltar interaÃ§Ã£o tripla</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in PSUBFAT2DBC(f1, f2, f3, bloco, resp, alpha.f = 0.5): não foi possível encontrar a função "PSUBFAT2DBC"</span></div><div class='input'><span class='fu'>PSUBFAT2DBC</span><span class='op'>(</span><span class='va'>f1</span>,<span class='va'>f2</span>,<span class='va'>f3</span>,<span class='va'>bloco</span>,<span class='va'>resp</span>,alpha.f <span class='op'>=</span> <span class='fl'>0.4</span><span class='op'>)</span> <span class='co'># para soltar interaÃ§Ã£o dupla</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in PSUBFAT2DBC(f1, f2, f3, bloco, resp, alpha.f = 0.4): não foi possível encontrar a função "PSUBFAT2DBC"</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
