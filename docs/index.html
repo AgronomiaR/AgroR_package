@@ -20,7 +20,7 @@
 <script src="pkgdown.js"></script><!-- docsearch --><script src="docsearch.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous">
 <link href="docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script><meta property="og:title" content="Experimental Statistics and Graphics for Agricultural Sciences ">
-<meta property="og:description" content="Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4), ANOVA of aligned ranks (Wobbrock, J.O., Findlater, L., Gergle, D., Higgins, JJ (2011), &lt;doi:10.1145/1978942.1978963&gt;) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi:10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).">
+<meta property="og:description" content="Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi:10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -34,6 +34,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -46,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.8</span>
       </span>
     </div>
 
@@ -60,7 +62,7 @@
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Descriptive
      
     <span class="caret"></span>
@@ -84,7 +86,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Analysis
      
     <span class="caret"></span>
@@ -127,7 +129,7 @@
       <a href="reference/PSUBDBC.html">PSUBDBC</a>
     </li>
     <li>
-      <a href="reference/PSUBSUB.html">PSUBSUB</a>
+      <a href="reference/PSUBFAT2DBC.html">PSUBFAT2DBC</a>
     </li>
     <li>
       <a href="reference/FAT2DIC.ad.html">FAT2DIC.ad</a>
@@ -174,7 +176,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Graphs
      
     <span class="caret"></span>
@@ -228,7 +230,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Data set
      
     <span class="caret"></span>
@@ -303,7 +305,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Utils
      
     <span class="caret"></span>
@@ -346,18 +348,20 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="agror-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#agror-" class="anchor"></a><a href="https://agronomiar.github.io/AgroR_package/index.html">AgroR</a> <img src="logo.png" align="right" height="139">
+<div class="section level1">
+<div class="page-header"><h1 id="agror-">
+<a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a>
+<img src="logo.png" align="right" height="139"><a class="anchor" aria-label="anchor" href="#agror-"></a>
 </h1></div>
 <!-- badges: start -->
 
 <!-- badges: end -->
 <p>Package: AgroR</p>
 <p>Type: Package</p>
-<p>Title: Experimental Statistics and Graphics for Agricultural Sciences</p>
-<p>Version: 1.2.3</p>
-<p>Date: 2021-08-21</p>
+<p>Title: Experimental Statistics and Graphics for Agricultural
+Sciences</p>
+<p>Version: 1.2.7</p>
+<p>Date: 2022-02-04</p>
 <p>Authors:</p>
 <ul>
 <li>Gabriel Danilo Shimizu</li>
@@ -365,34 +369,53 @@
 <li>Leandro Simoes Azeredo Goncalves</li>
 </ul>
 <p>Maintainer: Gabriel Danilo Shimizu <a href="mailto:shimizu@uel.br" class="email">shimizu@uel.br</a></p>
-<p>Description: Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4), Anova of aligned ranks (Wobbrock, JO, Findlater, L., Gergle, D., Higgins , JJ (2011), &lt;doi: 10.1145/1978942.1978963&gt;) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi: 10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).</p>
+<p>Description: Performs the analysis of completely randomized
+experimental designs (CRD), randomized blocks (RBD) and Latin square
+(LSD), experiments in double and triple factorial scheme (in CRD and
+RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided
+and joint analysis of experiments in CRD and RBD, linear regression
+analysis, test for two samples. The package performs analysis of
+variance, ANOVA assumptions and multiple comparison test of means or
+regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9),
+nonparametric test (Conover, 1999, ISBN: 0471160687), test for two
+samples, joint analysis of experiments according to Ferreira (2018,
+ISBN: 978-85-7269-566-4) and generalized linear model (glm) for binomial
+and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi:
+10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain
+descriptive measures and graphics, in addition to correlations and
+creative graphics used in agricultural sciences (Agronomy, Zootechnics,
+Food Science and related areas).</p>
 <p>Encoding: UTF-8</p>
 <p>RoxygenNote: 7.1.1</p>
-<p>Imports: ggplot2, lmtest, nortest, ScottKnott, lme4, crayon, grid, gridExtra, stringr, Hmisc, emmeans, ARTool, multcomp, ggrepel, reshape2, MASS, cowplot, multcompView, hnp, RColorBrewer, drc Suggests: DT, knitr, rmarkdown, roxygen2</p>
+<p>Imports: ggplot2, lmtest, nortest, ScottKnott, lme4, crayon, grid,
+gridExtra, stringr, Hmisc, emmeans, ARTool, multcomp, ggrepel, reshape2,
+MASS, cowplot, multcompView, hnp, RColorBrewer, drc Suggests: DT, knitr,
+rmarkdown, roxygen2</p>
 <p>Depends: R (&gt;= 3.6.0)</p>
 <p>License: GPL (&gt;= 2)</p>
 </div>
-<div id="installation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h1>
+<div class="section level1">
+<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h1>
 <p><br><br></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Install release version from CRAN</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"AgroR"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"AgroR"</span><span class="op">)</span>
 
 <span class="co"># Install development version from GitHub</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"https://github.com/AgronomiaR/AgroR.git"</span><span class="op">)</span></code></pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"https://github.com/AgronomiaR/AgroR.git"</span><span class="op">)</span></code></pre></div>
 <p><br><br></p>
 </div>
-<div id="references" class="section level1">
-<h1 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h1>
-<div id="data-set" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data-set" class="anchor"></a>Data set</h2>
+<div class="section level1">
+<h1 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h1>
+<div class="section level2">
+<h2 id="data-set">Data set<a class="anchor" aria-label="anchor" href="#data-set"></a>
+</h2>
 <ul>
 <li>
-<code>aristolochia</code>: Germination of seeds of <em>Aristolochia</em> sp. as a function of temperature.</li>
+<code>aristolochia</code>: Germination of seeds of
+<em>Aristolochia</em> sp. as a function of temperature.</li>
 <li>
 <code>bean</code>: bean data</li>
 <li>
@@ -402,7 +425,8 @@
 <li>
 <code>covercrops</code>: covercrops data</li>
 <li>
-<code>emerg</code>: Emergence of passion fruit seeds over time .</li>
+<code>emerg</code>: Emergence of passion fruit seeds over time
+.</li>
 <li>
 <code>enxofre</code>: Sulfur data</li>
 <li>
@@ -412,7 +436,8 @@
 <li>
 <code>orchard</code>: orchard data</li>
 <li>
-<code>passiflora</code>: Substrate data in the production of passion fruit seedlings</li>
+<code>passiflora</code>: Substrate data in the production of passion
+fruit seedlings</li>
 <li>
 <code>pepper</code>: pepper data</li>
 <li>
@@ -437,9 +462,9 @@
 <code>weather</code>: Weather data</li>
 </ul>
 </div>
-<div id="descritive-analysis" class="section level2">
-<h2 class="hasAnchor">
-<a href="#descritive-analysis" class="anchor"></a>Descritive analysis</h2>
+<div class="section level2">
+<h2 id="descritive-analysis">Descritive analysis<a class="anchor" aria-label="anchor" href="#descritive-analysis"></a>
+</h2>
 <ul>
 <li>
 <code>desc</code>: Descriptive analysis</li>
@@ -453,10 +478,11 @@
 <code>tabledesc</code>: Table descritive analysis</li>
 </ul>
 </div>
-<div id="analysis-function" class="section level2">
-<h2 class="hasAnchor">
-<a href="#analysis-function" class="anchor"></a>Analysis function</h2>
-<p><em>Analysis for testing of two independent or dependent samples by parametric or non-parametric method</em></p>
+<div class="section level2">
+<h2 id="analysis-function">Analysis function<a class="anchor" aria-label="anchor" href="#analysis-function"></a>
+</h2>
+<p><em>Analysis for testing of two independent or dependent samples by
+parametric or non-parametric method</em></p>
 <ul>
 <li>
 <code>test_two</code>: Test for two samples</li>
@@ -470,17 +496,21 @@
 <li>
 <code>DQL</code>: Latin square design</li>
 </ul>
-<p><em>Analysis of simple experiments in DIC and DBC by generalized linear model (Binomial or Poisson)</em></p>
+<p><em>Analysis of simple experiments in DIC and DBC by generalized
+linear model (Binomial or Poisson)</em></p>
 <ul>
 <li>
 <code>DIC.glm</code>: Completely randomized design by glm</li>
 <li>
 <code>DBC.glm</code>: Randomized block design by glm</li>
 </ul>
-<p><em>Analysis of experiments in DIC, DBC or DQL with multiple assessments over time or disregarding the effect of another factor</em></p>
+<p><em>Analysis of experiments in DIC, DBC or DQL with multiple
+assessments over time or disregarding the effect of another
+factor</em></p>
 <ul>
 <li>
-<code>DICT</code>: Completely randomized design evaluated over time</li>
+<code>DICT</code>: Completely randomized design evaluated over
+time</li>
 <li>
 <code>DBCT</code>: Randomized block design evaluated over time</li>
 <li>
@@ -489,30 +519,47 @@
 <p><em>Analysis of groups of experiments in DIC and DBC</em></p>
 <ul>
 <li>
-<code>conjdbc</code>: Joint analysis of experiments in randomized block design</li>
+<code>conjdbc</code>: Joint analysis of experiments in randomized
+block design</li>
 <li>
-<code>conjdic</code>: Joint analysis of experiments in completely randomized design</li>
+<code>conjdic</code>: Joint analysis of experiments in completely
+randomized design</li>
 </ul>
-<p><em>Analysis of experiments in double factorial design in DIC and DBC</em></p>
+<p><em>Analysis of experiments in double factorial design in DIC and
+DBC</em></p>
 <ul>
 <li>
 <code>FAT2DIC</code>: DIC experiments in double factorial</li>
 <li>
 <code>FAT2DBC</code>: DBC experiments in double factorial</li>
 </ul>
-<p><em>Analysis of double factorial design experiments in DIC or DBC with an additional treatment</em></p>
+<p><em>Analysis of double factorial design experiments in DIC or DBC
+with an additional treatment</em></p>
 <ul>
 <li>
-<code>FAT2DIC.ad</code>: DIC experiment in double factorial design with an additional treatment</li>
+<code>FAT2DIC.ad</code>: DIC experiment in double factorial design
+with an additional treatment</li>
 <li>
-<code>FAT2DBC.ad</code>: DBC experiment in double factorial design with an additional treatment</li>
+<code>FAT2DBC.ad</code>: DBC experiment in double factorial design
+with an additional treatment</li>
 </ul>
-<p><em>Analysis of DIC or DBC experiments in a factorial scheme with three factors</em></p>
+<p><em>Analysis of DIC or DBC experiments in a factorial scheme with
+three factors</em></p>
 <ul>
 <li>
 <code>FAT3DIC</code>: DIC experiments in triple factorial</li>
 <li>
 <code>FAT3DBC</code>: DBC experiments in triple factorial</li>
+</ul>
+<p><em>Analysis of triple factorial design experiments in DIC or DBC
+with an additional treatment</em></p>
+<ul>
+<li>
+<code>FAT3DIC.ad</code>: DIC experiment in double factorial design
+with an additional treatment</li>
+<li>
+<code>FAT3DBC.ad</code>: DBC experiment in double factorial design
+with an additional treatment</li>
 </ul>
 <p><em>Split-plot scheme in DIC or DBC</em></p>
 <ul>
@@ -526,11 +573,22 @@
 <li>
 <code>PSUBSUBDBC</code>: DBC experiments in split-split-plot</li>
 </ul>
+<p><em>Plot subdivided into randomized blocks with a subplot in a double
+factorial scheme</em></p>
+<ul>
+<li>
+<code>PSUBFAT2DBC</code>: Plot subdivided into randomized blocks
+with a subplot in a double factorial scheme</li>
+</ul>
 <p><em>Dunnett’s Test for Comparison of Control vs. Treatments</em></p>
 <ul>
-<li><p><code>dunnett</code>: Dunnett test</p></li>
-<li><p>Dunn’s non-parametric test</p></li>
-<li><p><code>dunn</code>: Dunn test</p></li>
+<li>
+<code>dunnett</code>: Dunnett test</li>
+</ul>
+<p><em>Dunn’s non-parametric test</em></p>
+<ul>
+<li>
+<code>dunn</code>: Dunn test</li>
 </ul>
 <p><em>Logistic regression 3 or 4 parameters</em></p>
 <ul>
@@ -542,9 +600,11 @@
 <li>
 <code>polynomial</code>: Linear regression graph</li>
 <li>
-<code>polynomial2</code>: Linear regression graph in double factorial</li>
+<code>polynomial2</code>: Linear regression graph in double
+factorial</li>
 <li>
-<code>polynomial2_color</code>: Linear regression graph in double factorial with color graph</li>
+<code>polynomial2_color</code>: Linear regression graph in double
+factorial with color graph</li>
 </ul>
 <p><em>Principal component analysis</em></p>
 <ul>
@@ -552,9 +612,9 @@
 <code>PCA_function</code>: Principal components analysis</li>
 </ul>
 </div>
-<div id="graphs" class="section level2">
-<h2 class="hasAnchor">
-<a href="#graphs" class="anchor"></a>Graphs</h2>
+<div class="section level2">
+<h2 id="graphs">Graphs<a class="anchor" aria-label="anchor" href="#graphs"></a>
+</h2>
 <ul>
 <li>
 <code>barplot_positive</code>: Positive barplot</li>
@@ -563,7 +623,8 @@
 <li>
 <code>corgraph</code>: Correlogram</li>
 <li>
-<code>cor_ic</code>: plot Pearson correlation with interval of confidence</li>
+<code>cor_ic</code>: plot Pearson correlation with interval of
+confidence</li>
 <li>
 <code>line_plot</code>: Line chart</li>
 <li>
@@ -571,11 +632,13 @@
 <li>
 <code>plot_interaction</code>: Interaction plot</li>
 <li>
-<code>plot_jitter</code>: Column, box or segment chart with observations</li>
+<code>plot_jitter</code>: Column, box or segment chart with
+observations</li>
 <li>
 <code>plot_TH</code>: Climate chart of temperature and humidity</li>
 <li>
-<code>plot_TH1</code>: Climate chart of temperature and humidity (Model 2)</li>
+<code>plot_TH1</code>: Climate chart of temperature and humidity
+(Model 2)</li>
 <li>
 <code>radargraph</code>: Circular column chart</li>
 <li>
@@ -585,12 +648,21 @@
 <li>
 <code>spider_graph</code>: Spider graph for sensorial analysis</li>
 <li>
-<code>TBARPLOT.reverse</code>: Reverse graph of DICT, DBCT and DQL output when geom=“bar”</li>
+<code>TBARPLOT.reverse</code>: Reverse graph of DICT, DBCT and DQL
+output when geom=“bar”</li>
+<li>
+<code>barfacet</code>: Bar graph for one factor with facets</li>
+<li>
+<code>bargraph_onefactor</code>: Group DIC, DBC and DQL functions
+column charts</li>
+<li>
+<code>bargraph_twofactor</code>: Group FAT2DIC, FAT2DBC, PSUBDIC or
+PSUBDBC functions column charts</li>
 </ul>
 </div>
-<div id="utils" class="section level2">
-<h2 class="hasAnchor">
-<a href="#utils" class="anchor"></a>Utils</h2>
+<div class="section level2">
+<h2 id="utils">Utils<a class="anchor" aria-label="anchor" href="#utils"></a>
+</h2>
 <ul>
 <li>
 <code>sketch</code>: Experimental sketch</li>
@@ -599,7 +671,10 @@
 <li>
 <code>transf</code>: Data transformation (Box-Cox, 1964)</li>
 <li>
-<code>summarise_anova</code>: Summary of analysis of variance and test of means</li>
+<code>summarise_anova</code>: Summary of analysis of variance and
+test of means</li>
+<li>
+<code>confinterval</code>: Interval of confidence for groups</li>
 </ul>
 </div>
 </div>
@@ -608,44 +683,58 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=AgroR">https://​cloud.r-project.org/​package=AgroR</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=AgroR" class="external-link">View on CRAN</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>GPL (&gt;= 2)</li>
 </ul>
 </div>
-<div class="developers">
-<h2>Developers</h2>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li>Gabriel Danilo Shimizu <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8524-508X" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Rodrigo Yudi Palhaci Marubayashi <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0003-2778-8654" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Leandro Simoes Azeredo Goncalves <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0001-9700-9375" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html#citation">Citing AgroR</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=AgroR"><img src="https://www.r-pkg.org/badges/version-ago/AgroR" alt="CRAN status"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable-1"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li>Gabriel Danilo Shimizu <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8524-508X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Rodrigo Yudi Palhaci Marubayashi <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0003-2778-8654" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Leandro Simoes Azeredo Goncalves <br><small class="roles"> Author, contributor </small> <a href="https://orcid.org/0000-0001-9700-9375" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://CRAN.R-project.org/package=AgroR" class="external-link"><img src="https://www.r-pkg.org/badges/version-ago/AgroR" alt="CRAN status"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable-1" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+</ul>
 </div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Gabriel Danilo Shimizu, Rodrigo Yudi Palhaci Marubayashi, Leandro Simoes Azeredo Goncalves.</p>
+  <p></p>
+<p>Developed by Gabriel Danilo Shimizu, Rodrigo Yudi Palhaci
+Marubayashi, Leandro Simoes Azeredo Goncalves.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>
