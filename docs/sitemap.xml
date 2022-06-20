@@ -34,7 +34,13 @@
     <loc>/reference/barplot_positive.html</loc>
   </url>
   <url>
+    <loc>/reference/bar_dunnett.html</loc>
+  </url>
+  <url>
     <loc>/reference/bar_graph.html</loc>
+  </url>
+  <url>
+    <loc>/reference/bar_graph2.html</loc>
   </url>
   <url>
     <loc>/reference/bean.html</loc>
@@ -140,6 +146,9 @@
   </url>
   <url>
     <loc>/reference/FAT3DIC.html</loc>
+  </url>
+  <url>
+    <loc>/reference/ibarplot.double.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>

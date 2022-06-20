@@ -48,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.8</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
       </span>
     </div>
 
@@ -374,16 +374,14 @@
 
 <div class="section level1">
 <div class="page-header"><h1 id="agror-">
-<a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a>
-<img src="logo.png" align="right" height="139"><a class="anchor" aria-label="anchor" href="#agror-"></a>
+<a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a> <img src="logo.png" align="right" height="139"><a class="anchor" aria-label="anchor" href="#agror-"></a>
 </h1></div>
 <!-- badges: start -->
 
 <!-- badges: end -->
 <p>Package: AgroR</p>
 <p>Type: Package</p>
-<p>Title: Experimental Statistics and Graphics for Agricultural
-Sciences</p>
+<p>Title: Experimental Statistics and Graphics for Agricultural Sciences</p>
 <p>Version: 1.2.7</p>
 <p>Date: 2022-02-04</p>
 <p>Authors:</p>
@@ -393,28 +391,10 @@ Sciences</p>
 <li>Leandro Simoes Azeredo Goncalves</li>
 </ul>
 <p>Maintainer: Gabriel Danilo Shimizu <a href="mailto:shimizu@uel.br" class="email">shimizu@uel.br</a></p>
-<p>Description: Performs the analysis of completely randomized
-experimental designs (CRD), randomized blocks (RBD) and Latin square
-(LSD), experiments in double and triple factorial scheme (in CRD and
-RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided
-and joint analysis of experiments in CRD and RBD, linear regression
-analysis, test for two samples. The package performs analysis of
-variance, ANOVA assumptions and multiple comparison test of means or
-regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9),
-nonparametric test (Conover, 1999, ISBN: 0471160687), test for two
-samples, joint analysis of experiments according to Ferreira (2018,
-ISBN: 978-85-7269-566-4) and generalized linear model (glm) for binomial
-and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi:
-10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain
-descriptive measures and graphics, in addition to correlations and
-creative graphics used in agricultural sciences (Agronomy, Zootechnics,
-Food Science and related areas).</p>
+<p>Description: Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi: 10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).</p>
 <p>Encoding: UTF-8</p>
 <p>RoxygenNote: 7.1.1</p>
-<p>Imports: ggplot2, lmtest, nortest, ScottKnott, lme4, crayon, grid,
-gridExtra, stringr, Hmisc, emmeans, ARTool, multcomp, ggrepel, reshape2,
-MASS, cowplot, multcompView, hnp, RColorBrewer, drc Suggests: DT, knitr,
-rmarkdown, roxygen2</p>
+<p>Imports: ggplot2, lmtest, nortest, ScottKnott, lme4, crayon, grid, gridExtra, stringr, Hmisc, emmeans, ARTool, multcomp, ggrepel, reshape2, MASS, cowplot, multcompView, hnp, RColorBrewer, drc Suggests: DT, knitr, rmarkdown, roxygen2</p>
 <p>Depends: R (&gt;= 3.6.0)</p>
 <p>License: GPL (&gt;= 2)</p>
 </div>
@@ -438,8 +418,7 @@ rmarkdown, roxygen2</p>
 </h2>
 <ul>
 <li>
-<code>aristolochia</code>: Germination of seeds of
-<em>Aristolochia</em> sp. as a function of temperature.</li>
+<code>aristolochia</code>: Germination of seeds of <em>Aristolochia</em> sp. as a function of temperature.</li>
 <li>
 <code>bean</code>: bean data</li>
 <li>
@@ -449,8 +428,7 @@ rmarkdown, roxygen2</p>
 <li>
 <code>covercrops</code>: covercrops data</li>
 <li>
-<code>emerg</code>: Emergence of passion fruit seeds over time
-.</li>
+<code>emerg</code>: Emergence of passion fruit seeds over time .</li>
 <li>
 <code>enxofre</code>: Sulfur data</li>
 <li>
@@ -460,8 +438,7 @@ rmarkdown, roxygen2</p>
 <li>
 <code>orchard</code>: orchard data</li>
 <li>
-<code>passiflora</code>: Substrate data in the production of passion
-fruit seedlings</li>
+<code>passiflora</code>: Substrate data in the production of passion fruit seedlings</li>
 <li>
 <code>pepper</code>: pepper data</li>
 <li>
@@ -505,8 +482,7 @@ fruit seedlings</li>
 <div class="section level2">
 <h2 id="analysis-function">Analysis function<a class="anchor" aria-label="anchor" href="#analysis-function"></a>
 </h2>
-<p><em>Analysis for testing of two independent or dependent samples by
-parametric or non-parametric method</em></p>
+<p><em>Analysis for testing of two independent or dependent samples by parametric or non-parametric method</em></p>
 <ul>
 <li>
 <code>test_two</code>: Test for two samples</li>
@@ -520,21 +496,17 @@ parametric or non-parametric method</em></p>
 <li>
 <code>DQL</code>: Latin square design</li>
 </ul>
-<p><em>Analysis of simple experiments in DIC and DBC by generalized
-linear model (Binomial or Poisson)</em></p>
+<p><em>Analysis of simple experiments in DIC and DBC by generalized linear model (Binomial or Poisson)</em></p>
 <ul>
 <li>
 <code>DIC.glm</code>: Completely randomized design by glm</li>
 <li>
 <code>DBC.glm</code>: Randomized block design by glm</li>
 </ul>
-<p><em>Analysis of experiments in DIC, DBC or DQL with multiple
-assessments over time or disregarding the effect of another
-factor</em></p>
+<p><em>Analysis of experiments in DIC, DBC or DQL with multiple assessments over time or disregarding the effect of another factor</em></p>
 <ul>
 <li>
-<code>DICT</code>: Completely randomized design evaluated over
-time</li>
+<code>DICT</code>: Completely randomized design evaluated over time</li>
 <li>
 <code>DBCT</code>: Randomized block design evaluated over time</li>
 <li>
@@ -543,47 +515,37 @@ time</li>
 <p><em>Analysis of groups of experiments in DIC and DBC</em></p>
 <ul>
 <li>
-<code>conjdbc</code>: Joint analysis of experiments in randomized
-block design</li>
+<code>conjdbc</code>: Joint analysis of experiments in randomized block design</li>
 <li>
-<code>conjdic</code>: Joint analysis of experiments in completely
-randomized design</li>
+<code>conjdic</code>: Joint analysis of experiments in completely randomized design</li>
 </ul>
-<p><em>Analysis of experiments in double factorial design in DIC and
-DBC</em></p>
+<p><em>Analysis of experiments in double factorial design in DIC and DBC</em></p>
 <ul>
 <li>
 <code>FAT2DIC</code>: DIC experiments in double factorial</li>
 <li>
 <code>FAT2DBC</code>: DBC experiments in double factorial</li>
 </ul>
-<p><em>Analysis of double factorial design experiments in DIC or DBC
-with an additional treatment</em></p>
+<p><em>Analysis of double factorial design experiments in DIC or DBC with an additional treatment</em></p>
 <ul>
 <li>
-<code>FAT2DIC.ad</code>: DIC experiment in double factorial design
-with an additional treatment</li>
+<code>FAT2DIC.ad</code>: DIC experiment in double factorial design with an additional treatment</li>
 <li>
-<code>FAT2DBC.ad</code>: DBC experiment in double factorial design
-with an additional treatment</li>
+<code>FAT2DBC.ad</code>: DBC experiment in double factorial design with an additional treatment</li>
 </ul>
-<p><em>Analysis of DIC or DBC experiments in a factorial scheme with
-three factors</em></p>
+<p><em>Analysis of DIC or DBC experiments in a factorial scheme with three factors</em></p>
 <ul>
 <li>
 <code>FAT3DIC</code>: DIC experiments in triple factorial</li>
 <li>
 <code>FAT3DBC</code>: DBC experiments in triple factorial</li>
 </ul>
-<p><em>Analysis of triple factorial design experiments in DIC or DBC
-with an additional treatment</em></p>
+<p><em>Analysis of triple factorial design experiments in DIC or DBC with an additional treatment</em></p>
 <ul>
 <li>
-<code>FAT3DIC.ad</code>: DIC experiment in double factorial design
-with an additional treatment</li>
+<code>FAT3DIC.ad</code>: DIC experiment in double factorial design with an additional treatment</li>
 <li>
-<code>FAT3DBC.ad</code>: DBC experiment in double factorial design
-with an additional treatment</li>
+<code>FAT3DBC.ad</code>: DBC experiment in double factorial design with an additional treatment</li>
 </ul>
 <p><em>Split-plot scheme in DIC or DBC</em></p>
 <ul>
@@ -597,12 +559,10 @@ with an additional treatment</li>
 <li>
 <code>PSUBSUBDBC</code>: DBC experiments in split-split-plot</li>
 </ul>
-<p><em>Plot subdivided into randomized blocks with a subplot in a double
-factorial scheme</em></p>
+<p><em>Plot subdivided into randomized blocks with a subplot in a double factorial scheme</em></p>
 <ul>
 <li>
-<code>PSUBFAT2DBC</code>: Plot subdivided into randomized blocks
-with a subplot in a double factorial scheme</li>
+<code>PSUBFAT2DBC</code>: Plot subdivided into randomized blocks with a subplot in a double factorial scheme</li>
 </ul>
 <p><em>Dunnett’s Test for Comparison of Control vs. Treatments</em></p>
 <ul>
@@ -624,11 +584,9 @@ with a subplot in a double factorial scheme</li>
 <li>
 <code>polynomial</code>: Linear regression graph</li>
 <li>
-<code>polynomial2</code>: Linear regression graph in double
-factorial</li>
+<code>polynomial2</code>: Linear regression graph in double factorial</li>
 <li>
-<code>polynomial2_color</code>: Linear regression graph in double
-factorial with color graph</li>
+<code>polynomial2_color</code>: Linear regression graph in double factorial with color graph</li>
 </ul>
 <p><em>Principal component analysis</em></p>
 <ul>
@@ -647,8 +605,7 @@ factorial with color graph</li>
 <li>
 <code>corgraph</code>: Correlogram</li>
 <li>
-<code>cor_ic</code>: plot Pearson correlation with interval of
-confidence</li>
+<code>cor_ic</code>: plot Pearson correlation with interval of confidence</li>
 <li>
 <code>line_plot</code>: Line chart</li>
 <li>
@@ -656,13 +613,11 @@ confidence</li>
 <li>
 <code>plot_interaction</code>: Interaction plot</li>
 <li>
-<code>plot_jitter</code>: Column, box or segment chart with
-observations</li>
+<code>plot_jitter</code>: Column, box or segment chart with observations</li>
 <li>
 <code>plot_TH</code>: Climate chart of temperature and humidity</li>
 <li>
-<code>plot_TH1</code>: Climate chart of temperature and humidity
-(Model 2)</li>
+<code>plot_TH1</code>: Climate chart of temperature and humidity (Model 2)</li>
 <li>
 <code>radargraph</code>: Circular column chart</li>
 <li>
@@ -672,16 +627,13 @@ observations</li>
 <li>
 <code>spider_graph</code>: Spider graph for sensorial analysis</li>
 <li>
-<code>TBARPLOT.reverse</code>: Reverse graph of DICT, DBCT and DQL
-output when geom=“bar”</li>
+<code>TBARPLOT.reverse</code>: Reverse graph of DICT, DBCT and DQL output when geom=“bar”</li>
 <li>
 <code>barfacet</code>: Bar graph for one factor with facets</li>
 <li>
-<code>bargraph_onefactor</code>: Group DIC, DBC and DQL functions
-column charts</li>
+<code>bargraph_onefactor</code>: Group DIC, DBC and DQL functions column charts</li>
 <li>
-<code>bargraph_twofactor</code>: Group FAT2DIC, FAT2DBC, PSUBDIC or
-PSUBDBC functions column charts</li>
+<code>bargraph_twofactor</code>: Group FAT2DIC, FAT2DBC, PSUBDIC or PSUBDBC functions column charts</li>
 </ul>
 </div>
 <div class="section level2">
@@ -695,8 +647,7 @@ PSUBDBC functions column charts</li>
 <li>
 <code>transf</code>: Data transformation (Box-Cox, 1964)</li>
 <li>
-<code>summarise_anova</code>: Summary of analysis of variance and
-test of means</li>
+<code>summarise_anova</code>: Summary of analysis of variance and test of means</li>
 <li>
 <code>confinterval</code>: Interval of confidence for groups</li>
 </ul>
@@ -751,14 +702,12 @@ test of means</li>
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by Gabriel Danilo Shimizu, Rodrigo Yudi Palhaci
-Marubayashi, Leandro Simoes Azeredo Goncalves.</p>
+<p>Developed by Gabriel Danilo Shimizu, Rodrigo Yudi Palhaci Marubayashi, Leandro Simoes Azeredo Goncalves.</p>
 </div>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
 </div>
 
       </footer>
