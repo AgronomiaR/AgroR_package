@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -64,6 +64,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="../reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -121,6 +124,9 @@
       <a href="../reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -131,6 +137,12 @@
     </li>
     <li>
       <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="../reference/logistic.html">logistic</a>
@@ -161,10 +173,25 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="../reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="../reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="../reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="../reference/corgraph.html">corgraph</a>
@@ -209,13 +236,10 @@
       <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="../reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="../reference/barfacet.html">barfacet</a>
+      <a href="../reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -340,25 +364,25 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">sketch</span><span class="op">(</span>
-  <span class="va">trat</span>,
-  trat1 <span class="op">=</span> <span class="cn">NULL</span>,
-  trat2 <span class="op">=</span> <span class="cn">NULL</span>,
-  <span class="va">r</span>,
-  design <span class="op">=</span> <span class="st">"DIC"</span>,
-  pos <span class="op">=</span> <span class="st">"line"</span>,
-  color.sep <span class="op">=</span> <span class="st">"all"</span>,
-  ID <span class="op">=</span> <span class="cn">FALSE</span>,
-  add.streets.y <span class="op">=</span> <span class="cn">NA</span>,
-  add.streets.x <span class="op">=</span> <span class="cn">NA</span>,
-  label.x <span class="op">=</span> <span class="st">""</span>,
-  label.y <span class="op">=</span> <span class="st">""</span>,
-  axissize <span class="op">=</span> <span class="fl">12</span>,
-  legendsize <span class="op">=</span> <span class="fl">12</span>,
-  labelsize <span class="op">=</span> <span class="fl">4</span>,
-  export.csv <span class="op">=</span> <span class="cn">FALSE</span>,
-  comment.caption <span class="op">=</span> <span class="cn">NULL</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">sketch</span><span class="op">(</span></span>
+<span>  <span class="va">trat</span>,</span>
+<span>  trat1 <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  trat2 <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  <span class="va">r</span>,</span>
+<span>  design <span class="op">=</span> <span class="st">"DIC"</span>,</span>
+<span>  pos <span class="op">=</span> <span class="st">"line"</span>,</span>
+<span>  color.sep <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  ID <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  add.streets.y <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  add.streets.x <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  label.x <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  label.y <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  axissize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  legendsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  labelsize <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  export.csv <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  comment.caption <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -519,18 +543,18 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">Trat</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Tr"</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">#=============================</span></span>
-<span class="r-in"><span class="co"># Completely randomized design</span></span>
-<span class="r-in"><span class="co">#=============================</span></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">Trat</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Tr"</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#=============================</span></span></span>
+<span class="r-in"><span><span class="co"># Completely randomized design</span></span></span>
+<span class="r-in"><span><span class="co">#=============================</span></span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,pos<span class="op">=</span><span class="st">"column"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,pos<span class="op">=</span><span class="st">"column"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,color.sep<span class="op">=</span><span class="st">"none"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,color.sep<span class="op">=</span><span class="st">"none"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,color.sep<span class="op">=</span><span class="st">"none"</span>,ID<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,color.sep<span class="op">=</span><span class="st">"none"</span>,ID<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    plots r trat x y</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1      1 1 Tr 1 1 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2      2 1 Tr 4 2 1</span>
@@ -551,32 +575,32 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 17    17 3 Tr 3 5 3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 18    18 3 Tr 6 6 3</span>
 <span class="r-plt img"><img src="sketch-4.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,pos<span class="op">=</span><span class="st">"column"</span>,add.streets.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>,r<span class="op">=</span><span class="fl">3</span>,pos<span class="op">=</span><span class="st">"column"</span>,add.streets.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-5.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">#=============================</span></span>
-<span class="r-in"><span class="co"># Randomized block design</span></span>
-<span class="r-in"><span class="co">#=============================</span></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>, r<span class="op">=</span><span class="fl">3</span>, design<span class="op">=</span><span class="st">"DBC"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#=============================</span></span></span>
+<span class="r-in"><span><span class="co"># Randomized block design</span></span></span>
+<span class="r-in"><span><span class="co">#=============================</span></span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>, r<span class="op">=</span><span class="fl">3</span>, design<span class="op">=</span><span class="st">"DBC"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-6.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>, r<span class="op">=</span><span class="fl">3</span>, design<span class="op">=</span><span class="st">"DBC"</span>,pos<span class="op">=</span><span class="st">"column"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>, r<span class="op">=</span><span class="fl">3</span>, design<span class="op">=</span><span class="st">"DBC"</span>,pos<span class="op">=</span><span class="st">"column"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-7.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>, r<span class="op">=</span><span class="fl">3</span>, design<span class="op">=</span><span class="st">"DBC"</span>,pos<span class="op">=</span><span class="st">"column"</span>,add.streets.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span><span class="va">Trat</span>, r<span class="op">=</span><span class="fl">3</span>, design<span class="op">=</span><span class="st">"DBC"</span>,pos<span class="op">=</span><span class="st">"column"</span>,add.streets.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-8.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="co">#=============================</span></span>
-<span class="r-in"><span class="co"># Completely randomized experiments in double factorial</span></span>
-<span class="r-in"><span class="co">#=============================</span></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span><span class="op">)</span>,</span>
-<span class="r-in">       trat1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span><span class="op">)</span>,</span>
-<span class="r-in">       design <span class="op">=</span> <span class="st">"FAT2DIC"</span>,</span>
-<span class="r-in">       r<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="co">#=============================</span></span></span>
+<span class="r-in"><span><span class="co"># Completely randomized experiments in double factorial</span></span></span>
+<span class="r-in"><span><span class="co">#=============================</span></span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>       trat1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>       design <span class="op">=</span> <span class="st">"FAT2DIC"</span>,</span></span>
+<span class="r-in"><span>       r<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-9.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">sketch</span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span><span class="op">)</span>,</span>
-<span class="r-in">       trat1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span><span class="op">)</span>,</span>
-<span class="r-in">       design <span class="op">=</span> <span class="st">"FAT2DIC"</span>,</span>
-<span class="r-in">       r<span class="op">=</span><span class="fl">3</span>,</span>
-<span class="r-in">       pos<span class="op">=</span><span class="st">"column"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">sketch</span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>       trat1<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>       design <span class="op">=</span> <span class="st">"FAT2DIC"</span>,</span></span>
+<span class="r-in"><span>       r<span class="op">=</span><span class="fl">3</span>,</span></span>
+<span class="r-in"><span>       pos<span class="op">=</span><span class="st">"column"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="sketch-10.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
@@ -592,7 +616,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
