@@ -1,10 +1,14 @@
 
 # [AgroR](https://agronomiar.github.io/AgroR_package/index.html) <img src='logo.png' align="right" height="139" />
 
+<!-- badges: start -->
+
 [![CRAN status](https://www.r-pkg.org/badges/version-ago/AgroR)](https://CRAN.R-project.org/package=AgroR)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/AgroR)
 ![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/AgroR)
+
+<!-- badges: end -->
 
 Package: AgroR
 
@@ -12,9 +16,9 @@ Type: Package
 
 Title: Experimental Statistics and Graphics for Agricultural Sciences 
 
-Version: 1.2.3
+Version: 1.3.0
 
-Date: 2021-08-21
+Date: 2022-06-13
 
 Authors: 
  
@@ -24,13 +28,14 @@ Authors:
 
 Maintainer: Gabriel Danilo Shimizu <shimizu@uel.br>
 
-Description: Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4), Anova of aligned ranks (Wobbrock, JO, Findlater, L., Gergle, D., Higgins , JJ (2011), <doi: 10.1145/1978942.1978963>) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), <doi: 10.14393/ufu.te.2019.1244>). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).
+Description: Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), <doi: 10.14393/ufu.te.2019.1244>). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).
 
 Encoding: UTF-8
 
 RoxygenNote: 7.1.1
 
-Imports: ggplot2, lmtest, nortest, ScottKnott, lme4, crayon, grid, gridExtra, stringr, Hmisc, emmeans, ARTool, multcomp, ggrepel, reshape2, MASS, cowplot, multcompView, hnp, RColorBrewer, drc
+Imports: ggplot2, nortest, lme4, crayon, lmtest, emmeans, multcomp, ggrepel, MASS, cowplot, multcompView, RColorBrewer, drc, dunn.test, gtools
+
 Suggests: DT, knitr, rmarkdown, roxygen2
 
 Depends: R (>= 3.6.0)
@@ -124,16 +129,16 @@ devtools::install_github("https://github.com/AgronomiaR/AgroR.git")
  - `FAT2DIC.ad`: DIC experiment in double factorial design with an additional treatment
  - `FAT2DBC.ad`: DBC experiment in double factorial design with an additional treatment
  
-*Analysis of double factorial design experiments in DIC or DBC by non-parametric aligned ranks Anova method*
-
- - `FAT2DIC.art`: Analysis of Variance of Aligned Rank Transformed Data in FAT2DIC
- - `FAT2DBC.art`: Analysis of Variance of Aligned Rank Transformed Data in FAT2DBC
-
 *Analysis of DIC or DBC experiments in a factorial scheme with three factors*
 
  - `FAT3DIC`: DIC experiments in triple factorial
  - `FAT3DBC`: DBC experiments in triple factorial
 
+*Analysis of triple factorial design experiments in DIC or DBC with an additional treatment*
+
+ - `FAT3DIC.ad`: DIC experiment in double factorial design with an additional treatment
+ - `FAT3DBC.ad`: DBC experiment in double factorial design with an additional treatment
+ 
 *Split-plot scheme in DIC or DBC*
 
  - `PSUBDBC`: DBC experiments in split-plot
@@ -142,10 +147,18 @@ devtools::install_github("https://github.com/AgronomiaR/AgroR.git")
 *Splitsplitplot parcels scheme in DBC*
 
  - `PSUBSUBDBC`: DBC experiments in split-split-plot
- 
+
+*Plot subdivided into randomized blocks with a subplot in a double factorial scheme*
+
+ - `PSUBFAT2DBC`: Plot subdivided into randomized blocks with a subplot in a double factorial scheme
+
 *Dunnett's Test for Comparison of Control vs. Treatments*
  
  - `dunnett`: Dunnett test
+
+*Dunn's non-parametric test*
+
+- `dunn`: Dunn test
 
 *Logistic regression 3 or 4 parameters*
 
@@ -163,10 +176,16 @@ devtools::install_github("https://github.com/AgronomiaR/AgroR.git")
  
 ## Graphs
 
+ - `barfacet`: Bar graph for one factor with facets
+ - `bargraph_onefactor`: Group DIC, DBC and DQL functions column charts
+ - `bargraph_twofactor`: Group FAT2DIC, FAT2DBC, PSUBDIC or PSUBDBC functions column charts
  - `barplot_positive`: Positive barplot
+ - `bar_dunnett`: Barplot for Dunnett test
  - `bar_graph`: bar graph for one factor
+ - "bar_graph2": Bar graph for one factor model 2
  - `corgraph`: Correlogram
  - `cor_ic`: plot Pearson correlation with interval of confidence
+ - `ibarplot.double`: Invert letters for two factor chart
  - `line_plot`: Line chart
  - `plot_cor`: plot correlation
  - `plot_interaction`: Interaction plot
@@ -175,6 +194,7 @@ devtools::install_github("https://github.com/AgronomiaR/AgroR.git")
  - `plot_TH1`: Climate chart of temperature and humidity (Model 2)
  - `radargraph`: Circular column chart
  - `seg_graph`: segment graph for one factor
+ - `seg_graph2`: Point graph for one factor model 2
  - `sk_graph`: Scott-Knott graphics
  - `spider_graph`: Spider graph for sensorial analysis
  - `TBARPLOT.reverse`: Reverse graph of DICT, DBCT and DQL output when geom="bar"
@@ -185,3 +205,5 @@ devtools::install_github("https://github.com/AgronomiaR/AgroR.git")
  - `aacp`: Area under the curve
  - `transf`: Data transformation (Box-Cox, 1964)
  - `summarise_anova`: Summary of analysis of variance and test of means
+ - `summarise_dunnett`: Dunnett's Test Summary
+ - `confinterval`: Interval of confidence for groups
