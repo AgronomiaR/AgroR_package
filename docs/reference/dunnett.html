@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -64,6 +64,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="../reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -121,6 +124,9 @@
       <a href="../reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -131,6 +137,12 @@
     </li>
     <li>
       <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="../reference/logistic.html">logistic</a>
@@ -161,10 +173,25 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="../reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="../reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="../reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="../reference/corgraph.html">corgraph</a>
@@ -209,13 +236,10 @@
       <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="../reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="../reference/barfacet.html">barfacet</a>
+      <a href="../reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -340,25 +364,25 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">dunnett</span><span class="op">(</span>
-  <span class="va">trat</span>,
-  <span class="va">resp</span>,
-  <span class="va">control</span>,
-  model <span class="op">=</span> <span class="st">"DIC"</span>,
-  block <span class="op">=</span> <span class="cn">NA</span>,
-  column <span class="op">=</span> <span class="cn">NA</span>,
-  line <span class="op">=</span> <span class="cn">NA</span>,
-  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,
-  pointsize <span class="op">=</span> <span class="fl">5</span>,
-  pointshape <span class="op">=</span> <span class="fl">21</span>,
-  linesize <span class="op">=</span> <span class="fl">1</span>,
-  labelsize <span class="op">=</span> <span class="fl">4</span>,
-  textsize <span class="op">=</span> <span class="fl">12</span>,
-  errorsize <span class="op">=</span> <span class="fl">1</span>,
-  widthsize <span class="op">=</span> <span class="fl">0.2</span>,
-  label <span class="op">=</span> <span class="st">"Response"</span>,
-  fontfamily <span class="op">=</span> <span class="st">"sans"</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">dunnett</span><span class="op">(</span></span>
+<span>  <span class="va">trat</span>,</span>
+<span>  <span class="va">resp</span>,</span>
+<span>  <span class="va">control</span>,</span>
+<span>  model <span class="op">=</span> <span class="st">"DIC"</span>,</span>
+<span>  block <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  column <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  line <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  pointsize <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  pointshape <span class="op">=</span> <span class="fl">21</span>,</span>
+<span>  linesize <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  labelsize <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  textsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  errorsize <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  widthsize <span class="op">=</span> <span class="fl">0.2</span>,</span>
+<span>  label <span class="op">=</span> <span class="st">"Response"</span>,</span>
+<span>  fontfamily <span class="op">=</span> <span class="st">"sans"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -444,26 +468,26 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="co">#====================================================</span></span>
-<span class="r-in"><span class="co"># complete randomized design</span></span>
-<span class="r-in"><span class="co">#====================================================</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"pomegranate"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">pomegranate</span>,<span class="fu">dunnett</span><span class="op">(</span>trat<span class="op">=</span><span class="va">trat</span>,resp<span class="op">=</span><span class="va">WL</span>,control<span class="op">=</span><span class="st">"T1"</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#====================================================</span></span></span>
+<span class="r-in"><span><span class="co"># complete randomized design</span></span></span>
+<span class="r-in"><span><span class="co">#====================================================</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"pomegranate"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">pomegranate</span>,<span class="fu">dunnett</span><span class="op">(</span>trat<span class="op">=</span><span class="va">trat</span>,resp<span class="op">=</span><span class="va">WL</span>,control<span class="op">=</span><span class="st">"T1"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           Estimate     IC-lwr    IC-upr t value p-value sig</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T2  -0.1650 -0.6427072 0.3127072 -0.9528  0.8034  ns</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T3   0.7750  0.2972928 1.2527072  4.4753  0.0014   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T4   0.7775  0.2997928 1.2552072  4.4898  0.0012   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T5   0.7950  0.3172928 1.2727072  4.5908  0.0010   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T6   0.3200 -0.1577072 0.7977072  1.8479  0.2668  ns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T2  -0.1650 -0.6433038 0.3133038 -0.9528  0.8035  ns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T3   0.7750  0.2966962 1.2533038  4.4753  0.0012   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T4   0.7775  0.2991962 1.2558038  4.4898  0.0012   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T5   0.7950  0.3166962 1.2733038  4.5908  0.0010   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T1  -  T6   0.3200 -0.1583038 0.7983038  1.8479  0.2668  ns</span>
 <span class="r-plt img"><img src="dunnett-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">#====================================================</span></span>
-<span class="r-in"><span class="co"># randomized block design in factorial double</span></span>
-<span class="r-in"><span class="co">#====================================================</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#====================================================</span></span></span>
+<span class="r-in"><span><span class="co"># randomized block design in factorial double</span></span></span>
+<span class="r-in"><span><span class="co">#====================================================</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from simulate3:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     resp</span>
@@ -488,10 +512,10 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from passiflora:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     bloco</span>
-<span class="r-in"><span class="va">respAd</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">268</span>, <span class="fl">322</span>, <span class="fl">275</span>, <span class="fl">350</span>, <span class="fl">320</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">a</span><span class="op">=</span><span class="fu"><a href="FAT2DBC.ad.html">FAT2DBC.ad</a></span><span class="op">(</span><span class="va">f1</span>, <span class="va">f2</span>, <span class="va">bloco</span>, <span class="va">resp</span>, <span class="va">respAd</span>,</span>
-<span class="r-in">             ylab<span class="op">=</span><span class="st">"Number of nodules"</span>,</span>
-<span class="r-in">             legend <span class="op">=</span> <span class="st">"Stages"</span>,mcomp<span class="op">=</span><span class="st">"sk"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">respAd</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">268</span>, <span class="fl">322</span>, <span class="fl">275</span>, <span class="fl">350</span>, <span class="fl">320</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">a</span><span class="op">=</span><span class="fu"><a href="FAT2DBC.ad.html">FAT2DBC.ad</a></span><span class="op">(</span><span class="va">f1</span>, <span class="va">f2</span>, <span class="va">bloco</span>, <span class="va">resp</span>, <span class="va">respAd</span>,</span></span>
+<span class="r-in"><span>             ylab<span class="op">=</span><span class="st">"Number of nodules"</span>,</span></span>
+<span class="r-in"><span>             legend <span class="op">=</span> <span class="st">"Stages"</span>,mcomp<span class="op">=</span><span class="st">"sk"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
@@ -521,7 +545,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Additional Information</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> CV (%) =  27.38</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CV (%) =  28.29</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Mean Factorial =  218.35</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Median Factorial =  185</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Mean Aditional =  307</span>
@@ -531,13 +555,13 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Analysis of Variance</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                Df   Sum Sq    Mean.Sq     F value        Pr(F)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1          1  16160.4  16160.400   4.1407431 4.927778e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator2          3 116554.5  38851.500   9.9548327 6.428916e-05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> block           4  11613.6   2903.400   0.7439317 5.684322e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1:Fator2   3 452096.2 150698.733  38.6131986 2.411216e-11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ad x Factorial  1 475410.7 475410.700 121.8134178 4.174439e-13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals      36 140500.0   3902.778                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                Df     Sum Sq    Mean.Sq    F value        Pr(F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1          1  16160.400  16160.400  3.8772062 5.765683e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator2          3 116554.500  38851.500  9.3212591 1.409219e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> block           4   7122.311   1780.578  0.4271966 7.878578e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1:Fator2   3 452096.200 150698.733 36.1556682 2.154175e-10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ad x Factorial  1  34928.100  34928.100  8.3799563 6.781309e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals      32 133377.689   4168.053                        </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Your analysis is not valid, suggests using a non-parametric test and try to transform the data</span>
@@ -546,13 +570,13 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Significant interaction: analyzing the interaction</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                          Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator2                    3 116554   38851  9.9548 6.429e-05 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> block                     4  11614    2903  0.7439 0.5684322    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator2:Fator1             4 468257  117064 29.9951 5.126e-11 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: Plantio  1  26112   26112  6.6906 0.0138814 *  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: R1+15    1  70896   70896 18.1656 0.0001393 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: V1+15    1 258888  258888 66.3343 1.101e-09 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: V3+15    1 112360  112360 28.7898 4.897e-06 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator2                    3 116554   38851  9.3213 0.0001409 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> block                     4  11614    2903  0.6966 0.5999233    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator2:Fator1             4 468257  117064 28.0861 4.580e-10 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: Plantio  1  26112   26112  6.2648 0.0176146 *  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: R1+15    1  70896   70896 17.0095 0.0002467 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: V1+15    1 258888  258888 62.1125 5.419e-09 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator2:Fator1: V3+15    1 112360  112360 26.9574 1.137e-05 ***</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -561,11 +585,11 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> -----------------------------------------------------------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1               1  16160   16160  4.1407  0.049278 *  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> block                4  11614    2903  0.7439  0.568432    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1:Fator2        6 568651   94775 24.2840 2.774e-11 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator1:Fator2: IN  3  75470   25157  6.4458  0.001317 ** </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator1:Fator2: NI  3 493181  164394 42.1222 7.282e-12 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1               1  16160   16160  3.8772  0.057657 .  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> block                4  11614    2903  0.6966  0.599923    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fator1:Fator2        6 568651   94775 22.7385 2.974e-10 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator1:Fator2: IN  3  75470   25157  6.0356  0.002232 ** </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Fator1:Fator2: NI  3 493181  164394 39.4414 7.343e-11 ***</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -580,22 +604,22 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Averages followed by the same lowercase letter in the column and </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> uppercase in the row do not differ by the sk (p&lt; 0.05 )</span>
 <span class="r-plt img"><img src="dunnett-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="va">data</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">f1</span>,<span class="va">f2</span>,sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span>,bloco<span class="op">=</span><span class="va">bloco</span>,resp<span class="op">=</span><span class="va">resp</span><span class="op">)</span>,</span>
-<span class="r-in">           <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Test"</span>,<span class="st">"Test"</span>,<span class="st">"Test"</span>,<span class="st">"Test"</span>,<span class="st">"Test"</span><span class="op">)</span>,</span>
-<span class="r-in">                      bloco<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">bloco</span><span class="op">)</span>,resp<span class="op">=</span><span class="va">respAd</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">data</span>,<span class="fu">dunnett</span><span class="op">(</span>trat <span class="op">=</span> <span class="va">trat</span>,</span>
-<span class="r-in">                  resp <span class="op">=</span> <span class="va">resp</span>,</span>
-<span class="r-in">                  control <span class="op">=</span> <span class="st">"Test"</span>,</span>
-<span class="r-in">                  block<span class="op">=</span><span class="va">bloco</span>,model <span class="op">=</span> <span class="st">"DBC"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">data</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">f1</span>,<span class="va">f2</span>,sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span>,bloco<span class="op">=</span><span class="va">bloco</span>,resp<span class="op">=</span><span class="va">resp</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>           <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>trat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Test"</span>,<span class="st">"Test"</span>,<span class="st">"Test"</span>,<span class="st">"Test"</span>,<span class="st">"Test"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                      bloco<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">bloco</span><span class="op">)</span>,resp<span class="op">=</span><span class="va">respAd</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">data</span>,<span class="fu">dunnett</span><span class="op">(</span>trat <span class="op">=</span> <span class="va">trat</span>,</span></span>
+<span class="r-in"><span>                  resp <span class="op">=</span> <span class="va">resp</span>,</span></span>
+<span class="r-in"><span>                  control <span class="op">=</span> <span class="st">"Test"</span>,</span></span>
+<span class="r-in"><span>                  block<span class="op">=</span><span class="va">bloco</span>,model <span class="op">=</span> <span class="st">"DBC"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                    Estimate     IC-lwr     IC-upr t value p-value sig</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INPlantio    -34.2 -148.76741   80.36741 -0.8376  0.9479  ns</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INV1+15     -166.6 -281.16741  -52.03259 -4.0802  0.0020   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INV3+15       -3.0 -117.56741  111.56741 -0.0735  1.0000  ns</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INR1+15      -70.4 -184.96741   44.16741 -1.7242  0.4040  ns</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIPlantio   -136.4 -250.96741  -21.83259 -3.3405  0.0137   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIV1+15      155.2   40.63259  269.76741  3.8010  0.0042   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIV3+15     -215.0 -329.56741 -100.43259 -5.2655  0.0001   *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIR1+15     -238.8 -353.36741 -124.23259 -5.8484  0.0000   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INPlantio    -34.2 -148.82557   80.42557 -0.8376  0.9479  ns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INV1+15     -166.6 -281.22557  -51.97443 -4.0802  0.0020   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INV3+15       -3.0 -117.62557  111.62557 -0.0735  1.0000  ns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  INR1+15      -70.4 -185.02557   44.22557 -1.7242  0.4042  ns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIPlantio   -136.4 -251.02557  -21.77443 -3.3405  0.0139   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIV1+15      155.2   40.57443  269.82557  3.8010  0.0042   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIV3+15     -215.0 -329.62557 -100.37443 -5.2655  0.0001   *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Test  -  NIR1+15     -238.8 -353.42557 -124.17443 -5.8484  0.0000   *</span>
 <span class="r-plt img"><img src="dunnett-3.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
@@ -611,7 +635,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

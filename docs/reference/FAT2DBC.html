@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -64,6 +64,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="../reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -121,6 +124,9 @@
       <a href="../reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -131,6 +137,12 @@
     </li>
     <li>
       <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="../reference/logistic.html">logistic</a>
@@ -161,10 +173,25 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="../reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="../reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="../reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="../reference/corgraph.html">corgraph</a>
@@ -209,13 +236,10 @@
       <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="../reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="../reference/barfacet.html">barfacet</a>
+      <a href="../reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -340,44 +364,44 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">FAT2DBC</span><span class="op">(</span>
-  <span class="va">f1</span>,
-  <span class="va">f2</span>,
-  <span class="va">block</span>,
-  <span class="va">response</span>,
-  norm <span class="op">=</span> <span class="st">"sw"</span>,
-  homog <span class="op">=</span> <span class="st">"bt"</span>,
-  alpha.f <span class="op">=</span> <span class="fl">0.05</span>,
-  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,
-  quali <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">TRUE</span><span class="op">)</span>,
-  mcomp <span class="op">=</span> <span class="st">"tukey"</span>,
-  grau <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,
-  grau12 <span class="op">=</span> <span class="cn">NA</span>,
-  grau21 <span class="op">=</span> <span class="cn">NA</span>,
-  transf <span class="op">=</span> <span class="fl">1</span>,
-  constant <span class="op">=</span> <span class="fl">0</span>,
-  geom <span class="op">=</span> <span class="st">"bar"</span>,
-  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span>,
-  ylab <span class="op">=</span> <span class="st">"Response"</span>,
-  xlab <span class="op">=</span> <span class="st">""</span>,
-  xlab.factor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"F1"</span>, <span class="st">"F2"</span><span class="op">)</span>,
-  legend <span class="op">=</span> <span class="st">"Legend"</span>,
-  fill <span class="op">=</span> <span class="st">"lightblue"</span>,
-  angle <span class="op">=</span> <span class="fl">0</span>,
-  textsize <span class="op">=</span> <span class="fl">12</span>,
-  labelsize <span class="op">=</span> <span class="fl">4</span>,
-  dec <span class="op">=</span> <span class="fl">3</span>,
-  family <span class="op">=</span> <span class="st">"sans"</span>,
-  point <span class="op">=</span> <span class="st">"mean_sd"</span>,
-  addmean <span class="op">=</span> <span class="cn">TRUE</span>,
-  errorbar <span class="op">=</span> <span class="cn">TRUE</span>,
-  CV <span class="op">=</span> <span class="cn">TRUE</span>,
-  sup <span class="op">=</span> <span class="cn">NA</span>,
-  color <span class="op">=</span> <span class="st">"rainbow"</span>,
-  posi <span class="op">=</span> <span class="st">"right"</span>,
-  ylim <span class="op">=</span> <span class="cn">NA</span>,
-  angle.label <span class="op">=</span> <span class="fl">0</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">FAT2DBC</span><span class="op">(</span></span>
+<span>  <span class="va">f1</span>,</span>
+<span>  <span class="va">f2</span>,</span>
+<span>  <span class="va">block</span>,</span>
+<span>  <span class="va">response</span>,</span>
+<span>  norm <span class="op">=</span> <span class="st">"sw"</span>,</span>
+<span>  homog <span class="op">=</span> <span class="st">"bt"</span>,</span>
+<span>  alpha.f <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  quali <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>  mcomp <span class="op">=</span> <span class="st">"tukey"</span>,</span>
+<span>  grau <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  grau12 <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  grau21 <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  transf <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  constant <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  geom <span class="op">=</span> <span class="st">"bar"</span>,</span>
+<span>  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  ylab <span class="op">=</span> <span class="st">"Response"</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  xlab.factor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"F1"</span>, <span class="st">"F2"</span><span class="op">)</span>,</span>
+<span>  legend <span class="op">=</span> <span class="st">"Legend"</span>,</span>
+<span>  fill <span class="op">=</span> <span class="st">"lightblue"</span>,</span>
+<span>  angle <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  textsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  labelsize <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  dec <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  family <span class="op">=</span> <span class="st">"sans"</span>,</span>
+<span>  point <span class="op">=</span> <span class="st">"mean_sd"</span>,</span>
+<span>  addmean <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  errorbar <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  CV <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  sup <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  color <span class="op">=</span> <span class="st">"rainbow"</span>,</span>
+<span>  posi <span class="op">=</span> <span class="st">"right"</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  angle.label <span class="op">=</span> <span class="fl">0</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -423,7 +447,7 @@
 
 
 <dt>grau</dt>
-<dd><p>Polynomial degree in case of quantitative factor (<em>default</em> is 1). Provide a vector with three elements.</p></dd>
+<dd><p>Polynomial degree in case of quantitative factor (<em>default</em> is 1). Provide a vector with two elements.</p></dd>
 
 
 <dt>grau12</dt>
@@ -491,7 +515,7 @@
 
 
 <dt>point</dt>
-<dd><p>if quali=FALSE, defines whether to plot all points ("all"), mean ("mean"), standard deviation ("mean_sd" - <em>default</em>) or mean with standard error (<em>default</em> - "mean_se").</p></dd>
+<dd><p>This function defines whether the point must have all points ("all"), mean ("mean"), standard deviation (<em>default</em> - "mean_sd") or mean with standard error ("mean_se") if quali= FALSE. For quali=TRUE, `mean_sd` and `mean_se` change which information will be displayed in the error bar.</p></dd>
 
 
 <dt>addmean</dt>
@@ -560,13 +584,13 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="co">#================================================</span></span>
-<span class="r-in"><span class="co"># Example cloro</span></span>
-<span class="r-in"><span class="co">#================================================</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#================================================</span></span></span>
+<span class="r-in"><span><span class="co"># Example cloro</span></span></span>
+<span class="r-in"><span><span class="co">#================================================</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">cloro</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from cloro (pos = 3):</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     bloco, f1, f2, resp</span>
@@ -594,7 +618,7 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from passiflora:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     bloco</span>
-<span class="r-in"><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">f1</span>, <span class="va">f2</span>, <span class="va">bloco</span>, <span class="va">resp</span>, ylab<span class="op">=</span><span class="st">"Number of nodules"</span>, legend <span class="op">=</span> <span class="st">"Stages"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">f1</span>, <span class="va">f2</span>, <span class="va">bloco</span>, <span class="va">resp</span>, ylab<span class="op">=</span><span class="st">"Number of nodules"</span>, legend <span class="op">=</span> <span class="st">"Stages"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
@@ -687,7 +711,7 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Averages followed by the same lowercase letter in the column </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> and uppercase in the row do not differ by the tukey (p&lt; 0.05 )</span>
 <span class="r-plt img"><img src="FAT2DBC-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">f1</span>, <span class="va">f2</span>, <span class="va">bloco</span>, <span class="va">resp</span>, mcomp<span class="op">=</span><span class="st">"sk"</span>, ylab<span class="op">=</span><span class="st">"Number of nodules"</span>, legend <span class="op">=</span> <span class="st">"Stages"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">f1</span>, <span class="va">f2</span>, <span class="va">bloco</span>, <span class="va">resp</span>, mcomp<span class="op">=</span><span class="st">"sk"</span>, ylab<span class="op">=</span><span class="st">"Number of nodules"</span>, legend <span class="op">=</span> <span class="st">"Stages"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
@@ -780,14 +804,14 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Averages followed by the same lowercase letter in the column </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> and uppercase in the row do not differ by the sk (p&lt; 0.05 )</span>
 <span class="r-plt img"><img src="FAT2DBC-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="co">#================================================</span></span>
-<span class="r-in"><span class="co"># Example covercrops</span></span>
-<span class="r-in"><span class="co">#================================================</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">covercrops</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">covercrops</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">A</span>, <span class="va">B</span>, <span class="va">Bloco</span>, <span class="va">Resp</span>, ylab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Yield"</span><span class="op">~</span><span class="op">(</span><span class="va">Kg</span><span class="op">~</span><span class="st">"100 m"</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span>
-<span class="r-in">legend <span class="op">=</span> <span class="st">"Cover crops"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="co">#================================================</span></span></span>
+<span class="r-in"><span><span class="co"># Example covercrops</span></span></span>
+<span class="r-in"><span><span class="co">#================================================</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">covercrops</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">covercrops</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">A</span>, <span class="va">B</span>, <span class="va">Bloco</span>, <span class="va">Resp</span>, ylab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Yield"</span><span class="op">~</span><span class="op">(</span><span class="va">Kg</span><span class="op">~</span><span class="st">"100 m"</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>legend <span class="op">=</span> <span class="st">"Cover crops"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
@@ -864,8 +888,8 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> $graph2</span>
 <span class="r-plt img"><img src="FAT2DBC-5.png" alt="" width="700" height="433"></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">A</span>, <span class="va">B</span>, <span class="va">Bloco</span>, <span class="va">Resp</span>, mcomp<span class="op">=</span><span class="st">"sk"</span>, ylab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Yield"</span><span class="op">~</span><span class="op">(</span><span class="va">Kg</span><span class="op">~</span><span class="st">"100 m"</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span>
-<span class="r-in">legend <span class="op">=</span> <span class="st">"Cover crops"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">FAT2DBC</span><span class="op">(</span><span class="va">A</span>, <span class="va">B</span>, <span class="va">Bloco</span>, <span class="va">Resp</span>, mcomp<span class="op">=</span><span class="st">"sk"</span>, ylab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Yield"</span><span class="op">~</span><span class="op">(</span><span class="va">Kg</span><span class="op">~</span><span class="st">"100 m"</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>legend <span class="op">=</span> <span class="st">"Cover crops"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
@@ -956,7 +980,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

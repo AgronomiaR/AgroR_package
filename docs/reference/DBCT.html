@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -64,6 +64,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="../reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -121,6 +124,9 @@
       <a href="../reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -131,6 +137,12 @@
     </li>
     <li>
       <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="../reference/logistic.html">logistic</a>
@@ -161,10 +173,25 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="../reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="../reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="../reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="../reference/corgraph.html">corgraph</a>
@@ -209,13 +236,10 @@
       <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="../reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="../reference/barfacet.html">barfacet</a>
+      <a href="../reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -340,35 +364,35 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">DBCT</span><span class="op">(</span>
-  <span class="va">trat</span>,
-  <span class="va">block</span>,
-  <span class="va">time</span>,
-  <span class="va">response</span>,
-  alpha.f <span class="op">=</span> <span class="fl">0.05</span>,
-  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,
-  mcomp <span class="op">=</span> <span class="st">"tukey"</span>,
-  geom <span class="op">=</span> <span class="st">"bar"</span>,
-  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span>,
-  fill <span class="op">=</span> <span class="st">"gray"</span>,
-  ylab <span class="op">=</span> <span class="st">"Response"</span>,
-  xlab <span class="op">=</span> <span class="st">"Independent"</span>,
-  textsize <span class="op">=</span> <span class="fl">12</span>,
-  labelsize <span class="op">=</span> <span class="fl">5</span>,
-  pointsize <span class="op">=</span> <span class="fl">4.5</span>,
-  error <span class="op">=</span> <span class="cn">TRUE</span>,
-  family <span class="op">=</span> <span class="st">"sans"</span>,
-  sup <span class="op">=</span> <span class="fl">0</span>,
-  addmean <span class="op">=</span> <span class="cn">FALSE</span>,
-  posi <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.8</span><span class="op">)</span>,
-  legend <span class="op">=</span> <span class="st">"Legend"</span>,
-  ylim <span class="op">=</span> <span class="cn">NA</span>,
-  width.bar <span class="op">=</span> <span class="fl">0.2</span>,
-  size.bar <span class="op">=</span> <span class="fl">0.8</span>,
-  dec <span class="op">=</span> <span class="fl">3</span>,
-  xnumeric <span class="op">=</span> <span class="cn">FALSE</span>,
-  all.letters <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">DBCT</span><span class="op">(</span></span>
+<span>  <span class="va">trat</span>,</span>
+<span>  <span class="va">block</span>,</span>
+<span>  <span class="va">time</span>,</span>
+<span>  <span class="va">response</span>,</span>
+<span>  alpha.f <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,</span>
+<span>  mcomp <span class="op">=</span> <span class="st">"tukey"</span>,</span>
+<span>  geom <span class="op">=</span> <span class="st">"bar"</span>,</span>
+<span>  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="st">"gray"</span>,</span>
+<span>  ylab <span class="op">=</span> <span class="st">"Response"</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">"Independent"</span>,</span>
+<span>  textsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  labelsize <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  pointsize <span class="op">=</span> <span class="fl">4.5</span>,</span>
+<span>  error <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  family <span class="op">=</span> <span class="st">"sans"</span>,</span>
+<span>  sup <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  addmean <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  posi <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.8</span><span class="op">)</span>,</span>
+<span>  legend <span class="op">=</span> <span class="st">"Legend"</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  width.bar <span class="op">=</span> <span class="fl">0.2</span>,</span>
+<span>  size.bar <span class="op">=</span> <span class="fl">0.8</span>,</span>
+<span>  dec <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  xnumeric <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  all.letters <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -516,9 +540,9 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span>list<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">simulate2</span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">simulate2</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span>list<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">simulate2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/attach.html" class="external-link">attach</a></span><span class="op">(</span><span class="va">simulate2</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from laranja:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     bloco, resp, trat</span>
@@ -531,11 +555,11 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from passiflora:</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     bloco, trat</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">#===================================</span></span>
-<span class="r-in"><span class="co"># default</span></span>
-<span class="r-in"><span class="co">#===================================</span></span>
-<span class="r-in"><span class="fu">DBCT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">bloco</span>, <span class="va">tempo</span>, <span class="va">resp</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="co"># default</span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="fu">DBCT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">bloco</span>, <span class="va">tempo</span>, <span class="va">resp</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">ANOVA and assumptions</span></span>
@@ -548,11 +572,11 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5  8.687842e-04   0.11296195 0.29177701     0.3166757  2.765267</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  2.543755e-04   0.55188443 0.06254508     0.5822472  2.051416</span>
 <span class="r-plt img"><img src="DBCT-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">#===================================</span></span>
-<span class="r-in"><span class="co"># segment chart</span></span>
-<span class="r-in"><span class="co">#===================================</span></span>
-<span class="r-in"><span class="fu">DBCT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">bloco</span>, <span class="va">tempo</span>, <span class="va">resp</span>, geom<span class="op">=</span><span class="st">"point"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="co"># segment chart</span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="fu">DBCT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">bloco</span>, <span class="va">tempo</span>, <span class="va">resp</span>, geom<span class="op">=</span><span class="st">"point"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">ANOVA and assumptions</span></span>
@@ -579,7 +603,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
