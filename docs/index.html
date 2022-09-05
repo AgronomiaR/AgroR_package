@@ -406,8 +406,8 @@
 <p>Package: AgroR</p>
 <p>Type: Package</p>
 <p>Title: Experimental Statistics and Graphics for Agricultural Sciences</p>
-<p>Version: 1.3.0</p>
-<p>Date: 2022-06-13</p>
+<p>Version: 1.3.1</p>
+<p>Date: 2022-08-29</p>
 <p>Authors:</p>
 <ul>
 <li>Gabriel Danilo Shimizu</li>
@@ -445,13 +445,13 @@
 <li>
 <code>aristolochia</code>: Germination of seeds of <em>Aristolochia</em> sp. as a function of temperature.</li>
 <li>
-<code>bean</code>: bean data</li>
+<code>bean</code>: Bean data</li>
 <li>
 <code>cloro</code>: Sodium dichloroisocyanurate in soybean</li>
 <li>
-<code>corn</code>: corn data</li>
+<code>corn</code>: Corn data</li>
 <li>
-<code>covercrops</code>: covercrops data</li>
+<code>covercrops</code>: Covercrops data</li>
 <li>
 <code>emerg</code>: Emergence of passion fruit seeds over time .</li>
 <li>
@@ -461,11 +461,11 @@
 <li>
 <code>mirtilo</code>: Cutting blueberry data</li>
 <li>
-<code>orchard</code>: orchard data</li>
+<code>orchard</code>: Orchard data</li>
 <li>
 <code>passiflora</code>: Substrate data in the production of passion fruit seedlings</li>
 <li>
-<code>pepper</code>: pepper data</li>
+<code>pepper</code>: Pepper data</li>
 <li>
 <code>phao</code>: Osmocote in <em>Phalaenopsis</em> sp.</li>
 <li>
@@ -507,6 +507,11 @@
 <div class="section level2">
 <h2 id="analysis-function">Analysis function<a class="anchor" aria-label="anchor" href="#analysis-function"></a>
 </h2>
+<p><em>t test to compare means with a reference value</em></p>
+<ul>
+<li>
+<code>tonetest</code>: t test to compare means with a reference value</li>
+</ul>
 <p><em>Analysis for testing of two independent or dependent samples by parametric or non-parametric method</em></p>
 <ul>
 <li>
@@ -520,6 +525,13 @@
 <code>DBC</code>: Randomized block design</li>
 <li>
 <code>DQL</code>: Latin square design</li>
+</ul>
+<p><em>Analysis of simple experiments with an additional treatment for quantitative factor</em></p>
+<ul>
+<li>
+<code>dic.ad</code>: Completely randomized design with an additional treatment for quantitative factor</li>
+<li>
+<code>dbc.ad</code>: Randomized block design with an additional treatment for quantitative factor</li>
 </ul>
 <p><em>Analysis of simple experiments in DIC and DBC by generalized linear model (Binomial or Poisson)</em></p>
 <ul>
@@ -543,6 +555,11 @@
 <code>conjdbc</code>: Joint analysis of experiments in randomized block design</li>
 <li>
 <code>conjdic</code>: Joint analysis of experiments in completely randomized design</li>
+</ul>
+<p><em>Analysis of groups of experiments in FAT2DBC</em></p>
+<ul>
+<li>
+<code>conjfat2dbc</code>: Joint analysis of experiments in randomized block design in double factorial</li>
 </ul>
 <p><em>Analysis of experiments in double factorial design in DIC and DBC</em></p>
 <ul>
@@ -634,18 +651,19 @@
 <li>
 <code>bar_dunnett</code>: Barplot for Dunnett test</li>
 <li>
-<code>bar_graph</code>: bar graph for one factor</li>
-<li>“bar_graph2”: Bar graph for one factor model 2</li>
+<code>bar_graph</code>: Bar graph for one factor</li>
+<li>
+<code>bar_graph2</code>: Bar graph for one factor model 2</li>
 <li>
 <code>corgraph</code>: Correlogram</li>
 <li>
-<code>cor_ic</code>: plot Pearson correlation with interval of confidence</li>
+<code>cor_ic</code>: Plot Pearson correlation with interval of confidence</li>
 <li>
 <code>ibarplot.double</code>: Invert letters for two factor chart</li>
 <li>
 <code>line_plot</code>: Line chart</li>
 <li>
-<code>plot_cor</code>: plot correlation</li>
+<code>plot_cor</code>: Plot correlation</li>
 <li>
 <code>plot_interaction</code>: Interaction plot</li>
 <li>
@@ -657,7 +675,7 @@
 <li>
 <code>radargraph</code>: Circular column chart</li>
 <li>
-<code>seg_graph</code>: segment graph for one factor</li>
+<code>seg_graph</code>: Segment graph for one factor</li>
 <li>
 <code>seg_graph2</code>: Point graph for one factor model 2</li>
 <li>
@@ -666,6 +684,8 @@
 <code>spider_graph</code>: Spider graph for sensorial analysis</li>
 <li>
 <code>TBARPLOT.reverse</code>: Reverse graph of DICT, DBCT and DQL output when geom=“bar”</li>
+<li>
+<code>plot_tonetest</code>: Graphic for t test to compare means with a reference value</li>
 </ul>
 </div>
 <div class="section level2">
