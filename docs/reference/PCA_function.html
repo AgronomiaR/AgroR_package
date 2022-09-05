@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -64,6 +64,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="../reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -121,6 +124,9 @@
       <a href="../reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -131,6 +137,12 @@
     </li>
     <li>
       <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="../reference/logistic.html">logistic</a>
@@ -161,10 +173,25 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="../reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="../reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="../reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="../reference/corgraph.html">corgraph</a>
@@ -209,13 +236,10 @@
       <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="../reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="../reference/barfacet.html">barfacet</a>
+      <a href="../reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -340,24 +364,24 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">PCA_function</span><span class="op">(</span>
-  <span class="va">data</span>,
-  scale <span class="op">=</span> <span class="cn">TRUE</span>,
-  text <span class="op">=</span> <span class="cn">TRUE</span>,
-  pointsize <span class="op">=</span> <span class="fl">5</span>,
-  textsize <span class="op">=</span> <span class="fl">12</span>,
-  labelsize <span class="op">=</span> <span class="fl">4</span>,
-  linesize <span class="op">=</span> <span class="fl">0.6</span>,
-  repel <span class="op">=</span> <span class="cn">TRUE</span>,
-  ylab <span class="op">=</span> <span class="cn">NA</span>,
-  xlab <span class="op">=</span> <span class="cn">NA</span>,
-  groups <span class="op">=</span> <span class="cn">NA</span>,
-  sc <span class="op">=</span> <span class="fl">1</span>,
-  font.family <span class="op">=</span> <span class="st">"sans"</span>,
-  theme <span class="op">=</span> <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span>,
-  label.legend <span class="op">=</span> <span class="st">"Cluster"</span>,
-  type.graph <span class="op">=</span> <span class="st">"biplot"</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">PCA_function</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  scale <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  text <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  pointsize <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>  textsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  labelsize <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  linesize <span class="op">=</span> <span class="fl">0.6</span>,</span>
+<span>  repel <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  ylab <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  groups <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  sc <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  font.family <span class="op">=</span> <span class="st">"sans"</span>,</span>
+<span>  theme <span class="op">=</span> <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  label.legend <span class="op">=</span> <span class="st">"Cluster"</span>,</span>
+<span>  type.graph <span class="op">=</span> <span class="st">"biplot"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -448,8 +472,8 @@ correlation between the vectors with the components is returned.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">pomegranate</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">medias</span><span class="op">=</span><span class="fu"><a href="tabledesc.html">tabledesc</a></span><span class="op">(</span><span class="va">pomegranate</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">pomegranate</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">medias</span><span class="op">=</span><span class="fu"><a href="tabledesc.html">tabledesc</a></span><span class="op">(</span><span class="va">pomegranate</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        WL     SS    AT    ratio</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> T1 1.8425 14.225 0.900 16.23341</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> T2 1.6775 14.275 0.900 16.73232</span>
@@ -457,7 +481,7 @@ correlation between the vectors with the components is returned.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> T4 2.6200 14.050 1.050 13.66667</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> T5 2.6375 14.350 1.075 13.50821</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> T6 2.1625 14.650 1.025 14.47664</span>
-<span class="r-in"><span class="fu">PCA_function</span><span class="op">(</span><span class="va">medias</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">PCA_function</span><span class="op">(</span><span class="va">medias</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $Eigenvalue</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 PC1      PC2        PC3         PC4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Eigenvalue 2.759004 1.080884 0.15403977 0.006072350</span>
@@ -504,7 +528,7 @@ correlation between the vectors with the components is returned.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -64,6 +64,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="../reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -121,6 +124,9 @@
       <a href="../reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -131,6 +137,12 @@
     </li>
     <li>
       <a href="../reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="../reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="../reference/logistic.html">logistic</a>
@@ -161,10 +173,25 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="../reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="../reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="../reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="../reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="../reference/corgraph.html">corgraph</a>
@@ -209,13 +236,10 @@
       <a href="../reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="../reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="../reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="../reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="../reference/barfacet.html">barfacet</a>
+      <a href="../reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -340,36 +364,36 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">plot_TH</span><span class="op">(</span>
-  <span class="va">tempo</span>,
-  <span class="va">Tmed</span>,
-  <span class="va">Tmax</span>,
-  <span class="va">Tmin</span>,
-  <span class="va">UR</span>,
-  xlab <span class="op">=</span> <span class="st">"Time"</span>,
-  yname1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Humidity (%)"</span><span class="op">)</span>,
-  yname2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Temperature ("</span><span class="op">^</span><span class="va">o</span> <span class="op">*</span> <span class="st">"C)"</span><span class="op">)</span>,
-  legend.H <span class="op">=</span> <span class="st">"Humidity"</span>,
-  legend.tmed <span class="op">=</span> <span class="st">"Tmed"</span>,
-  legend.tmin <span class="op">=</span> <span class="st">"Tmin"</span>,
-  legend.tmax <span class="op">=</span> <span class="st">"Tmax"</span>,
-  colormax <span class="op">=</span> <span class="st">"red"</span>,
-  colormin <span class="op">=</span> <span class="st">"blue"</span>,
-  colormean <span class="op">=</span> <span class="st">"darkgreen"</span>,
-  fillbar <span class="op">=</span> <span class="st">"gray80"</span>,
-  limitsy1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span><span class="op">)</span>,
-  x <span class="op">=</span> <span class="st">"days"</span>,
-  breaks <span class="op">=</span> <span class="st">"1 months"</span>,
-  textsize <span class="op">=</span> <span class="fl">12</span>,
-  legendsize <span class="op">=</span> <span class="fl">12</span>,
-  titlesize <span class="op">=</span> <span class="fl">12</span>,
-  linesize <span class="op">=</span> <span class="fl">1</span>,
-  date_format <span class="op">=</span> <span class="st">"%m-%Y"</span>,
-  sc <span class="op">=</span> <span class="fl">2.5</span>,
-  angle <span class="op">=</span> <span class="fl">0</span>,
-  legend.position <span class="op">=</span> <span class="st">"bottom"</span>,
-  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">plot_TH</span><span class="op">(</span></span>
+<span>  <span class="va">tempo</span>,</span>
+<span>  <span class="va">Tmed</span>,</span>
+<span>  <span class="va">Tmax</span>,</span>
+<span>  <span class="va">Tmin</span>,</span>
+<span>  <span class="va">UR</span>,</span>
+<span>  xlab <span class="op">=</span> <span class="st">"Time"</span>,</span>
+<span>  yname1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Humidity (%)"</span><span class="op">)</span>,</span>
+<span>  yname2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="st">"Temperature ("</span><span class="op">^</span><span class="va">o</span> <span class="op">*</span> <span class="st">"C)"</span><span class="op">)</span>,</span>
+<span>  legend.H <span class="op">=</span> <span class="st">"Humidity"</span>,</span>
+<span>  legend.tmed <span class="op">=</span> <span class="st">"Tmed"</span>,</span>
+<span>  legend.tmin <span class="op">=</span> <span class="st">"Tmin"</span>,</span>
+<span>  legend.tmax <span class="op">=</span> <span class="st">"Tmax"</span>,</span>
+<span>  colormax <span class="op">=</span> <span class="st">"red"</span>,</span>
+<span>  colormin <span class="op">=</span> <span class="st">"blue"</span>,</span>
+<span>  colormean <span class="op">=</span> <span class="st">"darkgreen"</span>,</span>
+<span>  fillbar <span class="op">=</span> <span class="st">"gray80"</span>,</span>
+<span>  limitsy1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">100</span><span class="op">)</span>,</span>
+<span>  x <span class="op">=</span> <span class="st">"days"</span>,</span>
+<span>  breaks <span class="op">=</span> <span class="st">"1 months"</span>,</span>
+<span>  textsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  legendsize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  titlesize <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  linesize <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  date_format <span class="op">=</span> <span class="st">"%m-%Y"</span>,</span>
+<span>  sc <span class="op">=</span> <span class="fl">2.5</span>,</span>
+<span>  angle <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  legend.position <span class="op">=</span> <span class="st">"bottom"</span>,</span>
+<span>  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -505,9 +529,9 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">weather</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">weather</span>, <span class="fu">plot_TH</span><span class="op">(</span><span class="va">tempo</span>, <span class="va">Tmed</span>, <span class="va">Tmax</span>, <span class="va">Tmin</span>, <span class="va">UR</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">weather</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">weather</span>, <span class="fu">plot_TH</span><span class="op">(</span><span class="va">tempo</span>, <span class="va">Tmed</span>, <span class="va">Tmax</span>, <span class="va">Tmin</span>, <span class="va">UR</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Scale for 'y' is already present. Adding another scale for 'y', which will</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> replace the existing scale.</span>
 <span class="r-plt img"><img src="plot_TH-1.png" alt="" width="700" height="433"></span>
@@ -525,7 +549,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
