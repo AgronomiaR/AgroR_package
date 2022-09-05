@@ -48,7 +48,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
       </span>
     </div>
 
@@ -93,6 +93,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="reference/tonetest.html">tonetest</a>
+    </li>
+    <li>
       <a href="reference/test_two.html">test_two</a>
     </li>
     <li>
@@ -150,6 +153,9 @@
       <a href="reference/conjdbc.html">conjdbc</a>
     </li>
     <li>
+      <a href="reference/conjfat2dbc.html">conjfat2dbc</a>
+    </li>
+    <li>
       <a href="reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -160,6 +166,12 @@
     </li>
     <li>
       <a href="reference/DQLT.html">DQLT</a>
+    </li>
+    <li>
+      <a href="reference/dic.ad.html">dic.ad</a>
+    </li>
+    <li>
+      <a href="reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
       <a href="reference/logistic.html">logistic</a>
@@ -192,10 +204,25 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="reference/bar_dunnett.html">bar_dunnett</a>
+    </li>
+    <li>
       <a href="reference/bar_graph.html">bar_graph</a>
     </li>
     <li>
+      <a href="reference/bar_graph2.html">bar_graph2</a>
+    </li>
+    <li>
       <a href="reference/barplot_positive.html">barplot_positive</a>
+    </li>
+    <li>
+      <a href="reference/bargraph_onefactor.html">bargraph_onefactor</a>
+    </li>
+    <li>
+      <a href="reference/bargraph_twofactor.html">bargraph_twofactor</a>
+    </li>
+    <li>
+      <a href="reference/barfacet.html">barfacet</a>
     </li>
     <li>
       <a href="reference/corgraph.html">corgraph</a>
@@ -240,13 +267,10 @@
       <a href="reference/TBARPLOT.reverse.html">TBARPLOT.reverse</a>
     </li>
     <li>
-      <a href="reference/bargraph_onefactor.html">bargraph_onefactor</a>
+      <a href="reference/ibarplot.double.html">ibarplot.double</a>
     </li>
     <li>
-      <a href="reference/bargraph_twofactor.html">bargraph_twofactor</a>
-    </li>
-    <li>
-      <a href="reference/barfacet.html">barfacet</a>
+      <a href="reference/plot_tonetest.html">plot_tonetest</a>
     </li>
   </ul>
 </li>
@@ -382,8 +406,8 @@
 <p>Package: AgroR</p>
 <p>Type: Package</p>
 <p>Title: Experimental Statistics and Graphics for Agricultural Sciences</p>
-<p>Version: 1.2.7</p>
-<p>Date: 2022-02-04</p>
+<p>Version: 1.3.0</p>
+<p>Date: 2022-06-13</p>
 <p>Authors:</p>
 <ul>
 <li>Gabriel Danilo Shimizu</li>
@@ -394,7 +418,8 @@
 <p>Description: Performs the analysis of completely randomized experimental designs (CRD), randomized blocks (RBD) and Latin square (LSD), experiments in double and triple factorial scheme (in CRD and RBD), experiments in subdivided plot scheme (in CRD and RBD), subdivided and joint analysis of experiments in CRD and RBD, linear regression analysis, test for two samples. The package performs analysis of variance, ANOVA assumptions and multiple comparison test of means or regression, according to Pimentel-Gomes (2009, ISBN: 978-85-7133-055-9), nonparametric test (Conover, 1999, ISBN: 0471160687), test for two samples, joint analysis of experiments according to Ferreira (2018, ISBN: 978-85-7269-566-4) and generalized linear model (glm) for binomial and Poisson family in CRD and RBD (Carvalho, FJ (2019), &lt;doi: 10.14393/ufu.te.2019.1244&gt;). It can also be used to obtain descriptive measures and graphics, in addition to correlations and creative graphics used in agricultural sciences (Agronomy, Zootechnics, Food Science and related areas).</p>
 <p>Encoding: UTF-8</p>
 <p>RoxygenNote: 7.1.1</p>
-<p>Imports: ggplot2, lmtest, nortest, ScottKnott, lme4, crayon, grid, gridExtra, stringr, Hmisc, emmeans, ARTool, multcomp, ggrepel, reshape2, MASS, cowplot, multcompView, hnp, RColorBrewer, drc Suggests: DT, knitr, rmarkdown, roxygen2</p>
+<p>Imports: ggplot2, nortest, lme4, crayon, lmtest, emmeans, multcomp, ggrepel, MASS, cowplot, multcompView, RColorBrewer, drc, dunn.test, gtools</p>
+<p>Suggests: DT, knitr, rmarkdown, roxygen2</p>
 <p>Depends: R (&gt;= 3.6.0)</p>
 <p>License: GPL (&gt;= 2)</p>
 </div>
@@ -403,11 +428,11 @@
 </h1>
 <p><br><br></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Install release version from CRAN</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"AgroR"</span><span class="op">)</span>
-
-<span class="co"># Install development version from GitHub</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"https://github.com/AgronomiaR/AgroR.git"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Install release version from CRAN</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"AgroR"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Install development version from GitHub</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"https://github.com/AgronomiaR/AgroR.git"</span><span class="op">)</span></span></code></pre></div>
 <p><br><br></p>
 </div>
 <div class="section level1">
@@ -599,13 +624,24 @@
 </h2>
 <ul>
 <li>
+<code>barfacet</code>: Bar graph for one factor with facets</li>
+<li>
+<code>bargraph_onefactor</code>: Group DIC, DBC and DQL functions column charts</li>
+<li>
+<code>bargraph_twofactor</code>: Group FAT2DIC, FAT2DBC, PSUBDIC or PSUBDBC functions column charts</li>
+<li>
 <code>barplot_positive</code>: Positive barplot</li>
 <li>
+<code>bar_dunnett</code>: Barplot for Dunnett test</li>
+<li>
 <code>bar_graph</code>: bar graph for one factor</li>
+<li>“bar_graph2”: Bar graph for one factor model 2</li>
 <li>
 <code>corgraph</code>: Correlogram</li>
 <li>
 <code>cor_ic</code>: plot Pearson correlation with interval of confidence</li>
+<li>
+<code>ibarplot.double</code>: Invert letters for two factor chart</li>
 <li>
 <code>line_plot</code>: Line chart</li>
 <li>
@@ -623,17 +659,13 @@
 <li>
 <code>seg_graph</code>: segment graph for one factor</li>
 <li>
+<code>seg_graph2</code>: Point graph for one factor model 2</li>
+<li>
 <code>sk_graph</code>: Scott-Knott graphics</li>
 <li>
 <code>spider_graph</code>: Spider graph for sensorial analysis</li>
 <li>
 <code>TBARPLOT.reverse</code>: Reverse graph of DICT, DBCT and DQL output when geom=“bar”</li>
-<li>
-<code>barfacet</code>: Bar graph for one factor with facets</li>
-<li>
-<code>bargraph_onefactor</code>: Group DIC, DBC and DQL functions column charts</li>
-<li>
-<code>bargraph_twofactor</code>: Group FAT2DIC, FAT2DBC, PSUBDIC or PSUBDBC functions column charts</li>
 </ul>
 </div>
 <div class="section level2">
@@ -648,6 +680,8 @@
 <code>transf</code>: Data transformation (Box-Cox, 1964)</li>
 <li>
 <code>summarise_anova</code>: Summary of analysis of variance and test of means</li>
+<li>
+<code>summarise_dunnett</code>: Dunnett’s Test Summary</li>
 <li>
 <code>confinterval</code>: Interval of confidence for groups</li>
 </ul>
@@ -707,7 +741,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>

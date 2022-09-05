@@ -58,6 +58,9 @@
     <loc>/reference/conjdic.html</loc>
   </url>
   <url>
+    <loc>/reference/conjfat2dbc.html</loc>
+  </url>
+  <url>
     <loc>/reference/corgraph.html</loc>
   </url>
   <url>
@@ -68,6 +71,9 @@
   </url>
   <url>
     <loc>/reference/covercrops.html</loc>
+  </url>
+  <url>
+    <loc>/reference/dbc.ad.html</loc>
   </url>
   <url>
     <loc>/reference/DBC.glm.html</loc>
@@ -86,6 +92,9 @@
   </url>
   <url>
     <loc>/reference/desc3fat.html</loc>
+  </url>
+  <url>
+    <loc>/reference/dic.ad.html</loc>
   </url>
   <url>
     <loc>/reference/DIC.glm.html</loc>
@@ -196,6 +205,9 @@
     <loc>/reference/plot_TH1.html</loc>
   </url>
   <url>
+    <loc>/reference/plot_tonetest.html</loc>
+  </url>
+  <url>
     <loc>/reference/polynomial.html</loc>
   </url>
   <url>
@@ -275,6 +287,9 @@
   </url>
   <url>
     <loc>/reference/tomate.html</loc>
+  </url>
+  <url>
+    <loc>/reference/tonetest.html</loc>
   </url>
   <url>
     <loc>/reference/transf.html</loc>
