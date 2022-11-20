@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -268,6 +284,9 @@
     </li>
     <li>
       <a href="../reference/enxofre.html">enxofre</a>
+    </li>
+    <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
     </li>
     <li>
       <a href="../reference/laranja.html">laranja</a>
@@ -570,7 +589,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5  1.757687e-04   0.67552390 0.42726077     0.3008609  2.566743</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  1.138255e-04   0.70461554 0.37578092     0.6357482  2.093636</span>
 <span class="r-plt img"><img src="DICT-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">simulate1</span>, <span class="fu">DICT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">tempo</span>, <span class="va">resp</span>,geom<span class="op">=</span><span class="st">"bar"</span>,sup<span class="op">=</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">simulate1</span>, <span class="fu">DICT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">tempo</span>, <span class="va">resp</span>, fill<span class="op">=</span><span class="st">"rainbow"</span>,family<span class="op">=</span><span class="st">"serif"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">ANOVA and assumptions</span></span>
@@ -583,7 +602,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5  1.757687e-04   0.67552390 0.42726077     0.3008609  2.566743</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  1.138255e-04   0.70461554 0.37578092     0.6357482  2.093636</span>
 <span class="r-plt img"><img src="DICT-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">simulate1</span>, <span class="fu">DICT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">tempo</span>, <span class="va">resp</span>,geom<span class="op">=</span><span class="st">"point"</span>,sup<span class="op">=</span><span class="fl">40</span>,<span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">simulate1</span>, <span class="fu">DICT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">tempo</span>, <span class="va">resp</span>,geom<span class="op">=</span><span class="st">"bar"</span>,sup<span class="op">=</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">ANOVA and assumptions</span></span>
@@ -596,6 +615,19 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5  1.757687e-04   0.67552390 0.42726077     0.3008609  2.566743</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  1.138255e-04   0.70461554 0.37578092     0.6357482  2.093636</span>
 <span class="r-plt img"><img src="DICT-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">simulate1</span>, <span class="fu">DICT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">tempo</span>, <span class="va">resp</span>,geom<span class="op">=</span><span class="st">"point"</span>,sup<span class="op">=</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">ANOVA and assumptions</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   p-value ANOVA Shapiro-Wilk   Bartlett Durbin-Watson    CV (%)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  9.143052e-05   0.44610417 0.23369500     0.2379509 11.625285</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  3.821815e-07   0.93845028 0.30786895     0.6600467  4.163316</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  7.822709e-05   0.59104221 0.46541352     0.3244232  4.189412</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  1.496061e-02   0.09984009 0.09849058     0.1332682  6.462590</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  1.757687e-04   0.67552390 0.42726077     0.3008609  2.566743</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  1.138255e-04   0.70461554 0.37578092     0.6357482  2.093636</span>
+<span class="r-plt img"><img src="DICT-4.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </div>

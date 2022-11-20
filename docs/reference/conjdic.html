@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -270,6 +286,9 @@
       <a href="../reference/enxofre.html">enxofre</a>
     </li>
     <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
+    </li>
+    <li>
       <a href="../reference/laranja.html">laranja</a>
     </li>
     <li>
@@ -373,6 +392,7 @@
 <span>  norm <span class="op">=</span> <span class="st">"sw"</span>,</span>
 <span>  homog <span class="op">=</span> <span class="st">"bt"</span>,</span>
 <span>  mcomp <span class="op">=</span> <span class="st">"tukey"</span>,</span>
+<span>  homog.value <span class="op">=</span> <span class="fl">7</span>,</span>
 <span>  quali <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  alpha.f <span class="op">=</span> <span class="fl">0.05</span>,</span>
 <span>  alpha.t <span class="op">=</span> <span class="fl">0.05</span>,</span>
@@ -423,6 +443,10 @@
 
 <dt>mcomp</dt>
 <dd><p>Multiple comparison test (Tukey (<em>default</em>), LSD, Scott-Knott and Duncan)</p></dd>
+
+
+<dt>homog.value</dt>
+<dd><p>Reference value for homogeneity of experiments. By default, this ratio should not be greater than 7</p></dd>
 
 
 <dt>quali</dt>
@@ -493,7 +517,8 @@
     </div>
     <div id="note">
     <h2>Note</h2>
-    <p>The ordering of the graph is according to the sequence in which the factor levels are arranged in the data sheet. The bars of the column and segment graphs are standard deviation.</p>
+    <p>In this function there are three possible outcomes. When the ratio between the experiments is greater than 7, the separate analyzes are returned, without however using the square of the joint residue. When the ratio is less than 7, but with significant interaction, the effects are tested using the square of the joint residual. When there is no significant interaction and the ratio is less than 7, the joint analysis between the experiments is returned.</p>
+<p>The ordering of the graph is according to the sequence in which the factor levels are arranged in the data sheet. The bars of the column and segment graphs are standard deviation.</p>
 <p>In the final output when transformation (transf argument) is different from 1, the columns resp and respo in the mean test are returned, indicating transformed and non-transformed mean, respectively.</p>
     </div>
     <div id="references">
@@ -561,19 +586,16 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Trat             2 14434.7222 7217.3611 45.986726 0.001737072</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Exp              2  4809.7222 2404.8611 15.323009 0.013329484</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Exp:Trat         4   627.7778  156.9444  1.016492 0.416446231</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Average residue 30  4631.9444  154.3981                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Average residue 27  4168.7500  154.3981                      </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Multiple comparison test ( tukey )</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-style: italic;">Multiple Comparison Test: Tukey HSD </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        resp groups</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 18 72.91667      a</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 12 68.33333      a</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  28.33333      b</span>
 <span class="r-plt img"><img src="conjdic-3.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
-<span class="r-plt img"><img src="conjdic-4.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </div>

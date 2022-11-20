@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -270,6 +286,9 @@
       <a href="../reference/enxofre.html">enxofre</a>
     </li>
     <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
+    </li>
+    <li>
       <a href="../reference/laranja.html">laranja</a>
     </li>
     <li>
@@ -374,6 +393,7 @@
 <span>  model <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  norm <span class="op">=</span> <span class="st">"sw"</span>,</span>
 <span>  homog <span class="op">=</span> <span class="st">"bt"</span>,</span>
+<span>  homog.value <span class="op">=</span> <span class="fl">7</span>,</span>
 <span>  alpha.f <span class="op">=</span> <span class="fl">0.05</span>,</span>
 <span>  alpha.t <span class="op">=</span> <span class="fl">0.05</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -415,6 +435,10 @@
 
 <dt>homog</dt>
 <dd><p>Homogeneity test of variances (<em>default</em> is Bartlett)</p></dd>
+
+
+<dt>homog.value</dt>
+<dd><p>Reference value for homogeneity of experiments. By default, this ratio should not be greater than 7</p></dd>
 
 
 <dt>alpha.f</dt>
@@ -459,9 +483,54 @@
 <span class="r-in"><span><span class="va">resp</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">48</span><span class="op">*</span><span class="fl">3</span>,<span class="fl">10</span>,<span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">bloco</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"b1"</span>,<span class="st">"b2"</span>,<span class="st">"b3"</span>,<span class="st">"b4"</span><span class="op">)</span>,<span class="fl">36</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dados</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">ano</span>,<span class="va">f1</span>,<span class="va">f2</span>,<span class="va">resp</span>,<span class="va">bloco</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">conjfat2dbc</span><span class="op">(</span><span class="va">f1</span>,<span class="va">f2</span>,<span class="va">bloco</span>,<span class="va">ano</span>,<span class="va">resp</span>, model<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(predvars, data, env):</span> object 'ano' not found</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">dados</span>,<span class="fu">conjfat2dbc</span><span class="op">(</span><span class="va">f1</span>,<span class="va">f2</span>,<span class="va">bloco</span>,<span class="va">ano</span>,<span class="va">resp</span>, model<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.9855468 0.1363499</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered normal</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Homogeneity of Variances</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                               Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared)  12.47598 0.3289486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, the variances can be considered homogeneous</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Independence from errors</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)  2.860767 0.8143241</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered independent</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Test Homogeneity of experiments</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2.066998</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Based on the analysis of variance and homogeneity of experiments, it can be concluded that: </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Experiments cannot be analyzed together (Separate by experiment)</span>
 <span class="r-plt img"><img src="conjfat2dbc-1.png" alt="" width="700" height="433"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-plt img"><img src="conjfat2dbc-2.png" alt="" width="700" height="433"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Analysis of variance</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             Df    Sum Sq   Mean Sq   F value     Pr(&gt;F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f1           2  3.706365 1.8531823 1.2257446 0.31281749</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f2           3  2.225938 0.7419794 0.4907651 0.69229042</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f1:f2        6  2.464822 0.4108037 0.2717166 0.94427950</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> local:bloco 11 14.528634 1.3207849 0.8736027 0.57697075</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f1:f2:local 22 33.261424 1.5118829 1.5376651 0.01670947</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals   99 97.340056 0.9832329                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </div>

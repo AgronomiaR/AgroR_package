@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -268,6 +284,9 @@
     </li>
     <li>
       <a href="../reference/enxofre.html">enxofre</a>
+    </li>
+    <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
     </li>
     <li>
       <a href="../reference/laranja.html">laranja</a>
@@ -572,6 +591,19 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5  8.687842e-04   0.11296195 0.29177701     0.3166757  2.765267</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  2.543755e-04   0.55188443 0.06254508     0.5822472  2.051416</span>
 <span class="r-plt img"><img src="DBCT-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu">DBCT</span><span class="op">(</span><span class="va">trat</span>, <span class="va">bloco</span>, <span class="va">tempo</span>, <span class="va">resp</span>,fill<span class="op">=</span><span class="st">"rainbow"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">ANOVA and assumptions</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   p-value ANOVA Shapiro-Wilk   Bartlett Durbin-Watson    CV (%)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  3.210683e-04   0.04597748 0.17664020     0.2232452 11.907549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  5.870699e-06   0.32303793 0.23068072     0.6899538  4.465134</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  4.517922e-04   0.31186247 0.84811700     0.3190431  4.514334</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  8.164832e-03   0.46256418 0.13341771     0.3167184  5.665891</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  8.687842e-04   0.11296195 0.29177701     0.3166757  2.765267</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2.543755e-04   0.55188443 0.06254508     0.5822472  2.051416</span>
+<span class="r-plt img"><img src="DBCT-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">#===================================</span></span></span>
 <span class="r-in"><span><span class="co"># segment chart</span></span></span>
@@ -588,7 +620,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4  8.164832e-03   0.46256418 0.13341771     0.3167184  5.665891</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5  8.687842e-04   0.11296195 0.29177701     0.3166757  2.765267</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  2.543755e-04   0.55188443 0.06254508     0.5822472  2.051416</span>
-<span class="r-plt img"><img src="DBCT-2.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="DBCT-3.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </div>

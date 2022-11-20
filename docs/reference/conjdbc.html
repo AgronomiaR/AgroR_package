@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -270,6 +286,9 @@
       <a href="../reference/enxofre.html">enxofre</a>
     </li>
     <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
+    </li>
+    <li>
       <a href="../reference/laranja.html">laranja</a>
     </li>
     <li>
@@ -372,6 +391,7 @@
 <span>  transf <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  norm <span class="op">=</span> <span class="st">"sw"</span>,</span>
 <span>  homog <span class="op">=</span> <span class="st">"bt"</span>,</span>
+<span>  homog.value <span class="op">=</span> <span class="fl">7</span>,</span>
 <span>  theme <span class="op">=</span> <span class="fu">theme_classic</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  mcomp <span class="op">=</span> <span class="st">"tukey"</span>,</span>
 <span>  quali <span class="op">=</span> <span class="cn">TRUE</span>,</span>
@@ -418,6 +438,10 @@
 
 <dt>homog</dt>
 <dd><p>Homogeneity test of variances (<em>default</em> is Bartlett)</p></dd>
+
+
+<dt>homog.value</dt>
+<dd><p>Reference value for homogeneity of experiments. By default, this ratio should not be greater than 7</p></dd>
 
 
 <dt>theme</dt>
@@ -488,7 +512,8 @@
     </div>
     <div id="note">
     <h2>Note</h2>
-    <p>The ordering of the graph is according to the sequence in which the factor levels are arranged in the data sheet. The bars of the column and segment graphs are standard deviation.</p>
+    <p>In this function there are three possible outcomes. When the ratio between the experiments is greater than 7, the separate analyzes are returned, without however using the square of the joint residue. When the ratio is less than 7, but with significant interaction, the effects are tested using the square of the joint residual. When there is no significant interaction and the ratio is less than 7, the joint analysis between the experiments is returned.</p>
+<p>The ordering of the graph is according to the sequence in which the factor levels are arranged in the data sheet. The bars of the column and segment graphs are standard deviation.</p>
 <p>In the final output when transformation (transf argument) is different from 1, the columns resp and respo in the mean test are returned, indicating transformed and non-transformed mean, respectively.</p>
     </div>
     <div id="references">
@@ -511,6 +536,10 @@
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agronomiar.github.io/AgroR_package/index.html" class="external-link">AgroR</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">mirtilo</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="co"># No significant interaction</span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">mirtilo</span>, <span class="fu">conjdbc</span><span class="op">(</span><span class="va">trat</span>, <span class="va">bloco</span>, <span class="va">exp</span>, <span class="va">resp</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Error() model is singular</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -555,17 +584,115 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Exp              2  4809.7222 2404.86111 15.3230088 0.013329484</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Block/Local      6   362.5000   60.41667  0.3849558 0.857661006</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Exp:Trat         4   627.7778  156.94444  0.7730901 0.556825561</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Average residue 21  4263.1944  203.00926                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Average residue 18  3654.1667  203.00926                       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Multiple comparison test ( tukey )</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-style: italic;">Multiple Comparison Test: Tukey HSD </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        resp groups</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 18 72.91667      a</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 12 68.33333      a</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6  28.33333      b</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="co"># Significant interaction</span></span></span>
+<span class="r-in"><span><span class="co">#===================================</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">eucalyptus</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">eucalyptus</span>, <span class="fu">conjdbc</span><span class="op">(</span><span class="va">trati</span>, <span class="va">bloc</span>, <span class="va">exp</span>, <span class="va">resp</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Error() model is singular</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.9838179 0.4835598</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered normal</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Homogeneity of Variances</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                               Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared) 0.4788843 0.9928761</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, the variances can be considered homogeneous</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Independence from errors</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)  2.590588 0.7295125</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered independent</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Test Homogeneity of experiments</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2.635549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Based on the analysis of variance and homogeneity of experiments, it can be concluded that: </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Experiments cannot be analyzed together (Separate by experiment)</span>
 <span class="r-plt img"><img src="conjdbc-3.png" alt="" width="700" height="433"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-plt img"><img src="conjdbc-4.png" alt="" width="700" height="433"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Analysis of variance</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 Df     Sum Sq    Mean Sq    F value       Pr(&gt;F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Trat             5  135.15111  27.030222  3.5300682 4.246447e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Exp              2 1490.94528 745.472639 97.3565518 2.781453e-07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block/Local      6   38.78472   6.464120  0.8441953 5.639987e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Exp:Trat        10   76.57139   7.657139  2.5596319 1.530346e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Average residue 45  134.61750   2.991500                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $`Exp 1`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Df      Sum Sq     Mean.Sq    F value       Pr(F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Trat              5  53.5033333 10.70066667 3.57702379 0.008285007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block             3   0.1483333  0.04944444 0.01652831 0.997061685</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Average Residual 45 134.6175000  2.99150000                       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $`Exp 2`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Df    Sum Sq  Mean.Sq  F value       Pr(F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Trat              5  52.16208 10.43242 3.487353 0.009506374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block             3  60.19792 20.06597 6.707662 0.000773219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Average Residual 45 134.61750  2.99150                     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $`Exp 3`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Df    Sum Sq  Mean.Sq    F value        Pr(F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Trat              5 106.05708 21.21142 7.09056215 5.797267e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block             3   0.64125  0.21375 0.07145245 9.749323e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Average Residual 45 134.61750  2.99150                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-style: italic;">Multiple Comparison Test: Tukey HSD </span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $`Exp 1`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      resp1 groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 1 20.625     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 2 19.050      b</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 3 23.025      a</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 4 22.500     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 5 21.950     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 6 19.500     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $`Exp 2`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      resp1 groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 1  9.775      b</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 2 12.025     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 3 14.000      a</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 4 12.975     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 5 14.125      a</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 6 11.975     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $`Exp 3`</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      resp1 groups</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 1 22.250      b</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 2 21.375      b</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 3 21.250      b</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 4 24.175     ab</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 5 27.025      a</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> T 6 21.350      b</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>

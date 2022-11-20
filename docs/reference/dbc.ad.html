@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -268,6 +284,9 @@
     </li>
     <li>
       <a href="../reference/enxofre.html">enxofre</a>
+    </li>
+    <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
     </li>
     <li>
       <a href="../reference/laranja.html">laranja</a>
@@ -478,7 +497,72 @@
 <span class="r-in"><span><span class="va">resp</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">7</span>, <span class="fl">7</span>, <span class="fl">8</span>, <span class="fl">4</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">bloco</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"B1"</span>,<span class="st">"B2"</span>,<span class="st">"B3"</span>,<span class="st">"B4"</span>,<span class="st">"B5"</span><span class="op">)</span>,<span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">dbc.ad</span><span class="op">(</span><span class="va">doses</span>, <span class="va">bloco</span>, <span class="va">resp</span>, responsead<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">6</span>,<span class="fl">0.1</span><span class="op">)</span>,grau<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in model.frame.default(formula = resp ~ trat1 + bloco1, drop.unused.levels = TRUE):</span> variable lengths differ (found for 'trat1')</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          Method Statistic    p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.8958017 0.04857807</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> As the calculated p-value is less than the 5% significance level, H0 is rejected. Therefore, errors do not follow a normal distribution</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Homogeneity of Variances</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                               Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared)  1.348151 0.9298999</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level,hypothesis H0 is not rejected. Therefore, the variances can be considered homogeneous</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Independence from errors</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)  2.795562 0.6112248</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered independent</span></span>
+<span class="r-plt img"><img src="dbc.ad-1.png" alt="" width="700" height="433"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Additional Information</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CV (%) =  13.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Mean =  4.5333</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Median =  4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Possible outliers =  No discrepant point</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Analysis of Variance</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Analysis of Variance Table</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Response: response</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Factor             4 44.400 11.1000 31.5578 6.008e-05 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block              4  4.344  1.0861  3.0879   0.08184 .  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Factor vs control  1  1.588  1.5879  4.5146   0.06633 .  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals          8  2.814  0.3517                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----------------------------------------------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Regression Models</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----------------------------------------------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               Estimate Std. Error   t value     Pr(&gt;|t|)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept) -1.0666667  1.0615452 -1.004824 3.348137e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> trat         5.2714286  0.8089681  6.516238 2.867473e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> I(trat^2)   -0.9285714  0.1322804 -7.019719 1.395317e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----------------------------------------------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deviations from regression</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ----------------------------------------------------</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           Df       SSq       MSQ          F      p-value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Linear     1  2.700000  2.700000   7.676211 2.427428e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Quadratic  1 36.214286 36.214286 102.958702 7.611992e-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deviation  2  5.485714  2.742857   7.798056 1.321290e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual   8  2.813888  0.351736                        </span>
+<span class="r-plt img"><img src="dbc.ad-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </div>

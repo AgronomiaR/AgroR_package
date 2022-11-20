@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
       </span>
     </div>
 
@@ -127,6 +127,9 @@
       <a href="../reference/conjfat2dbc.html">conjfat2dbc</a>
     </li>
     <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+    <li>
       <a href="../reference/dunnett.html">dunnett</a>
     </li>
     <li>
@@ -139,12 +142,34 @@
       <a href="../reference/DQLT.html">DQLT</a>
     </li>
     <li>
+      <a href="../reference/PCA_function.html">PCA_function</a>
+    </li>
+    <li>
+      <a href="../reference/dunn.html">dunn</a>
+    </li>
+    <li>
+      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
+    </li>
+    <li>
       <a href="../reference/dic.ad.html">dic.ad</a>
     </li>
     <li>
       <a href="../reference/dbc.ad.html">dbc.ad</a>
     </li>
     <li>
+      <a href="../reference/quant.fat2.desd.html">quant.fat2.desd</a>
+    </li>
+    <li>
+      <a href="../reference/jointcluster.html">jointcluster</a>
+    </li>
+  </ul></li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Regression
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
       <a href="../reference/logistic.html">logistic</a>
     </li>
     <li>
@@ -155,15 +180,6 @@
     </li>
     <li>
       <a href="../reference/polynomial2_color.html">polynomial2_color</a>
-    </li>
-    <li>
-      <a href="../reference/PCA_function.html">PCA_function</a>
-    </li>
-    <li>
-      <a href="../reference/dunn.html">dunn</a>
-    </li>
-    <li>
-      <a href="../reference/STRIPLOT.html">STRIPLOT</a>
     </li>
   </ul></li>
 <li class="dropdown">
@@ -268,6 +284,9 @@
     </li>
     <li>
       <a href="../reference/enxofre.html">enxofre</a>
+    </li>
+    <li>
+      <a href="../reference/eucalyptus.html">eucalyptus</a>
     </li>
     <li>
       <a href="../reference/laranja.html">laranja</a>
@@ -390,6 +409,8 @@
 <span>  angle <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>  family <span class="op">=</span> <span class="st">"sans"</span>,</span>
 <span>  dec <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  width.column <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  width.bar <span class="op">=</span> <span class="fl">0.3</span>,</span>
 <span>  addmean <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  errorbar <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  posi <span class="op">=</span> <span class="st">"top"</span>,</span>
@@ -500,6 +521,14 @@
 <dd><p>Number of cells</p></dd>
 
 
+<dt>width.column</dt>
+<dd><p>Width column if geom="bar"</p></dd>
+
+
+<dt>width.bar</dt>
+<dd><p>Width errorbar</p></dd>
+
+
 <dt>addmean</dt>
 <dd><p>Plot the average value on the graph (<em>default</em> is TRUE)</p></dd>
 
@@ -513,7 +542,7 @@
 
 
 <dt>point</dt>
-<dd><p>Defines whether to plot mean ("mean"), mean with standard deviation ("mean_sd" - <em>default</em>) or mean with standard error (<em>default</em> - "mean_se").</p></dd>
+<dd><p>Defines whether to plot mean ("mean"), mean with standard deviation ("mean_sd" - <em>default</em>) or mean with standard error ("mean_se"). For parametric test it is possible to plot the square root of QMres (mean_qmres).</p></dd>
 
 
 <dt>angle.label</dt>
@@ -603,7 +632,7 @@
 <span class="r-msg co"><span class="r-pr">#&gt;</span> As the calculated p-value is greater than the 5% significance level, H0 is not rejected</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Multiple Comparison Test</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-style: italic;">Multiple Comparison Test: Tukey HSD</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "H0 is not rejected"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
