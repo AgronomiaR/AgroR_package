@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">AgroR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.3.4</span>
       </span>
     </div>
 
@@ -359,6 +359,22 @@
 <li>
   <a href="../news/index.html">News</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Shiny App
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu"><li>
+      <a href="https://fisher.uel.br/AgroR_shiny" class="external-link">english</a>
+    </li>
+    <li>
+      <a href="https://fisher.uel.br/AgroR_shiny.pt" class="external-link">portuguese</a>
+    </li>
+  </ul></li>
+<li>
+  <a href="https://fisher.uel.br" class="external-link">Fisher Project</a>
+</li>
       </ul><ul class="nav navbar-nav navbar-right"></ul><form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
         <div class="form-group">
           <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off"></div>
@@ -415,7 +431,8 @@
 <span>  errorbar <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  posi <span class="op">=</span> <span class="st">"top"</span>,</span>
 <span>  point <span class="op">=</span> <span class="st">"mean_sd"</span>,</span>
-<span>  angle.label <span class="op">=</span> <span class="fl">0</span></span>
+<span>  angle.label <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  ylim <span class="op">=</span> <span class="cn">NA</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -547,6 +564,10 @@
 
 <dt>angle.label</dt>
 <dd><p>label angle</p></dd>
+
+
+<dt>ylim</dt>
+<dd><p>Define a numerical sequence referring to the y scale. You can use a vector or the `seq` command.</p></dd>
 
 </dl></div>
     <div id="value">
@@ -780,7 +801,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
