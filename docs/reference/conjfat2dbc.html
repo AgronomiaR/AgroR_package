@@ -366,10 +366,10 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
-      <a href="https://fisher.uel.br/AgroR_shiny" class="external-link">english</a>
+      <a href="https://fisher.uel.br/AgroR_shiny" class="external-link">English</a>
     </li>
     <li>
-      <a href="https://fisher.uel.br/AgroR_shiny.pt" class="external-link">portuguese</a>
+      <a href="https://fisher.uel.br/AgroR_shiny.pt" class="external-link">Portuguese</a>
     </li>
   </ul></li>
 <li>
@@ -510,27 +510,28 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                          Method Statistic   p.value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.9952889 0.9249287</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.9936686 0.7794519</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered normal</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Homogeneity of Variances</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                               Method Statistic    p.value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared)  19.34165 0.05522973</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                               Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared)  23.44848 0.0152697</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, the variances can be considered homogeneous</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> As the calculated p-value is less than the 5% significance level, H0 is rejected. Therefore, the variances are not homogeneous</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Independence from errors</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  Method Statistic   p.value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)  2.456987 0.8143241</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)  2.568423 0.8143241</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered independent</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Test Homogeneity of experiments</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2.347274</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.779032</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Based on the analysis of variance and homogeneity of experiments, it can be concluded that: </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">The experiments can be analyzed together</span></span>
@@ -542,13 +543,13 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Analysis of variance</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             Df     Sum Sq   Mean Sq   F value    Pr(&gt;F)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> f1           2  0.4336804 0.2168402 0.1896953 0.8285499</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> f2           3  1.1394247 0.3798082 0.3322624 0.8020917</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> f1:f2        6  4.6416491 0.7736082 0.6767650 0.6697811</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> local:bloco 11 14.7050431 1.3368221 1.1694736 0.3609150</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> f1:f2:local 22 25.1481404 1.1430973 1.1901246 0.1940136</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals   99 95.0880566 0.9604854                    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             Df    Sum Sq   Mean Sq   F value    Pr(&gt;F)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f1           2  1.588736 0.7943681 0.6529516 0.5303031</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f2           3  8.457173 2.8190575 2.3171980 0.1035156</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f1:f2        6  8.344925 1.3908208 1.1432215 0.3710006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> local:bloco 11 12.026048 1.0932771 0.8986477 0.5563127</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> f1:f2:local 22 26.764767 1.2165803 1.2587297 0.1270165</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals   99 95.684923 0.9665144                    </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>

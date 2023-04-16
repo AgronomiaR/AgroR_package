@@ -366,10 +366,10 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
-      <a href="https://fisher.uel.br/AgroR_shiny" class="external-link">english</a>
+      <a href="https://fisher.uel.br/AgroR_shiny" class="external-link">English</a>
     </li>
     <li>
-      <a href="https://fisher.uel.br/AgroR_shiny.pt" class="external-link">portuguese</a>
+      <a href="https://fisher.uel.br/AgroR_shiny.pt" class="external-link">Portuguese</a>
     </li>
   </ul></li>
 <li>
@@ -518,23 +518,23 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Normality of errors</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                          Method Statistic   p.value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.8897012 0.0381404</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Shapiro-Wilk normality test(W) 0.9282362 0.1807871</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> As the calculated p-value is less than the 5% significance level, H0 is rejected. Therefore, errors do not follow a normal distribution</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered normal</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Homogeneity of Variances</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                               Method Statistic   p.value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared)  1.216321 0.9433021</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Bartlett test(Bartlett's K-squared)  2.016098 0.8469131</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level,hypothesis H0 is not rejected. Therefore, the variances can be considered homogeneous</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Independence from errors</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  Method Statistic  p.value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)  2.793516 0.608904</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  Method Statistic   p.value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Durbin-Watson test(DW)   2.78918 0.6039814</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #000000;">As the calculated p-value is greater than the 5% significance level, hypothesis H0 is not rejected. Therefore, errors can be considered independent</span></span>
 <span class="r-plt img"><img src="dbc.ad-1.png" alt="" width="700" height="433"></span>
@@ -543,7 +543,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">Additional Information</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00; font-weight: bold;">-----------------------------------------------------------------</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> CV (%) =  13.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> CV (%) =  12.82</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Mean =  4.5333</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Median =  4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Possible outliers =  No discrepant point</span>
@@ -555,10 +555,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Response: response</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Factor             4 44.400 11.1000 31.2528 6.228e-05 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Block              4  4.317  1.0791  3.0384   0.08472 .  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Factor vs control  1  1.711  1.7113  4.8184   0.05945 .  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals          8  2.841  0.3552                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Factor             4 44.400 11.1000 32.8473 5.176e-05 ***</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Block              4  4.585  1.1462  3.3918   0.06657 .  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Factor vs control  1  2.229  2.2287  6.5952   0.03323 *  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals          8  2.703  0.3379                      </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -574,10 +574,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> Deviations from regression</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ----------------------------------------------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           Df       SSq        MSQ          F      p-value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Linear     1  2.700000  2.7000000   7.602028 2.478258e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Quadratic  1 36.214286 36.2142857 101.963704 7.893454e-06</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Deviation  2  5.485714  2.7428571   7.722695 1.355596e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residual   8  2.841347  0.3551684                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Linear     1  2.700000  2.7000000   7.989882 2.226515e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Quadratic  1 36.214286 36.2142857 107.165878 6.551814e-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Deviation  2  5.485714  2.7428571   8.116706 1.187686e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Residual   8  2.703419  0.3379274                        </span>
 <span class="r-plt img"><img src="dbc.ad-2.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
